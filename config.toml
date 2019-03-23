@@ -21,8 +21,8 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "Terminal"
-    subtitle = "A simple, retro theme for Hugo"
+    title = "λ"
+    subtitle = "marcb's blog"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
@@ -30,11 +30,11 @@ paginate = 5
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "Terminal"
+      logoText = "$ cd ~"
       logoHomeLink = "/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
-        identifier = "home"
-        name = "Home"
-        url = "/home"
+        identifier = "about"
+        name = "About"
+        url = "http://marcb.pro/"
