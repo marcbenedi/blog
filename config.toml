@@ -1,6 +1,8 @@
-baseURL = "http://blog.marcb.pro/"
+baseURL = "https://marcbenedi.github.io/blog/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+
+publishDir = "docs"
 
 theme = "terminal"
 paginate = 5
