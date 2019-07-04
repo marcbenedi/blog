@@ -1,6 +1,5 @@
-baseURL = "https://marcbenedi.github.io/blog/"
+baseURL = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
 
 publishDir = "docs"
 
@@ -11,9 +10,9 @@ paginate = 5
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "posts"
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "green"
+  themeColor = "organge"
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 4
   # set theme to full screen width
   fullWidthTheme = true
   # center theme with default width
@@ -38,5 +37,5 @@ paginate = 5
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "about"
-        name = "About"
+        name = "Visit marcb.pro page"
         url = "http://marcb.pro/"
