@@ -1,4 +1,4 @@
-baseURL = "/blog/"
+baseURL = "https://marcbenedi.github.io/blog/"
 languageCode = "en-us"
 
 publishDir = "docs"
@@ -32,7 +32,7 @@ paginate = 5
 
     [languages.en.params.logo]
       logoText = "$ cd ~"
-      logoHomeLink = "/blog/"
+      logoHomeLink = "https://marcbenedi.github.io/blog/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
