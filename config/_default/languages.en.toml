@@ -1,0 +1,11 @@
+title = "λ"
+subtitle = "marcb's blog"
+keywords = ""
+copyright = ""
+menuMore = "Show more"
+readMore = "Read more"
+readOtherPosts = "Read other posts"
+
+[params.logo]
+  logoText = "$ cd ~"
+  logoHomeLink = "https://marcbenedi.github.io/blog/"
