@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/blog/"
 languageCode = "en-us"
 
 publishDir = "docs"
@@ -32,7 +32,7 @@ paginate = 5
 
     [languages.en.params.logo]
       logoText = "$ cd ~"
-      logoHomeLink = "/"
+      logoHomeLink = "/blog/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
