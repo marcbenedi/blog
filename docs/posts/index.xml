@@ -6,9 +6,41 @@
     <description>Recent content in Posts on λ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 16 Apr 2020 12:01:03 +0200</lastBuildDate>
     
 	<atom:link href="https://marcbenedi.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bellman-Ford</title>
+      <link>https://marcbenedi.github.io/blog/posts/algorithms/bellman-ford/</link>
+      <pubDate>Sun, 14 Jul 2019 19:20:38 +0200</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/algorithms/bellman-ford/</guid>
+      <description>This is the first post of a new series called Algorithms. The idea behind it is explaining algorithms that I have previously worked with or new ones I have found interesting 😄. Each post of this series will have the following structure: - Introduction - Idea or concept - Pseudo-code - Implementation in real code
+ Source: techiedelight.com  Introduction In this post I&amp;rsquo;m going to explain the Bellman-Ford algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Android Studio Plugins</title>
+      <link>https://marcbenedi.github.io/blog/posts/android-studio-plugins/</link>
+      <pubDate>Thu, 04 Jul 2019 22:55:24 +0200</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/android-studio-plugins/</guid>
+      <description>Welcome everybody!
+In this post I&amp;rsquo;ll be talking about the most useful plugins I have installed in Android Studio 😀
+As you may know, the main goal of an IDE is being more productive and with a good set of plugins, you will achieve a better productivity.
+Advanced Java Folding Android Material Design Icon Generator CodeGlance Exynap GsonFormat Key promoter Material Theme UI String Manipulation GitFlow </description>
+    </item>
+    
+    <item>
+      <title>Hello world!</title>
+      <link>https://marcbenedi.github.io/blog/posts/hello-world/</link>
+      <pubDate>Tue, 19 Mar 2019 22:28:36 +0100</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/hello-world/</guid>
+      <description>Why? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit maximus, malesuada lacus vitae, facilisis felis. Duis a tincidunt augue, id dignissim velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque sed metus vitae tellus posuere facilisis id et leo. Duis quis ex eu neque efficitur luctus. Vivamus sed quam cursus, fringilla eros et, faucibus sapien. Maecenas quis neque luctus, varius lectus sit amet, sollicitudin nulla.</description>
+    </item>
     
   </channel>
 </rss>
