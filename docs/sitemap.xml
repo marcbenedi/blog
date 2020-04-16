@@ -1,20 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://marcbenedi.github.io/blog/categories/</loc>
-    <priority>0</priority>
+    <loc>https://marcbenedi.github.io/blog/posts/linux/</loc>
+    <lastmod>2020-04-16T12:01:03+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://marcbenedi.github.io/blog/tags/</loc>
-    <priority>0</priority>
+    <loc>https://marcbenedi.github.io/blog/posts/linux/daemon/</loc>
+    <lastmod>2020-04-16T12:01:03+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/posts/</loc>
+    <lastmod>2020-04-16T12:01:03+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://marcbenedi.github.io/blog/</loc>
-    <priority>0</priority>
+    <lastmod>2020-04-16T12:01:03+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/tags/blog/</loc>
+    <lastmod>2020-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/posts/linux/i-use-arch-btw/</loc>
+    <lastmod>2020-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/tags/linux/</loc>
+    <lastmod>2020-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/tags/</loc>
+    <lastmod>2020-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/tags/algorithms/</loc>
+    <lastmod>2019-07-14T19:20:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/posts/algorithms/bellman-ford/</loc>
+    <lastmod>2019-07-14T19:20:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/tags/graphs/</loc>
+    <lastmod>2019-07-14T19:20:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/posts/android-studio-plugins/</loc>
+    <lastmod>2019-07-04T22:55:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/posts/hello-world/</loc>
+    <lastmod>2019-03-19T22:28:36+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/categories/</loc>
   </url>
   
 </urlset>

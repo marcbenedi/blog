@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>λ</title>
@@ -6,9 +6,60 @@
     <description>Recent content on λ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 16 Apr 2020 12:01:03 +0200</lastBuildDate>
     
 	<atom:link href="https://marcbenedi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Daemon</title>
+      <link>https://marcbenedi.github.io/blog/posts/linux/daemon/</link>
+      <pubDate>Thu, 16 Apr 2020 12:01:03 +0200</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/linux/daemon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I use Arch btw</title>
+      <link>https://marcbenedi.github.io/blog/posts/linux/i-use-arch-btw/</link>
+      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/linux/i-use-arch-btw/</guid>
+      <description>Cover source: https://www.carmenbianca.eu/en/post/2020-01-05-big-distro/
+ Some years ago I switched from Windows 10 to Ubuntu as an operative system for my laptop which has been my loyal companion for more than 6 years. It was fun. Of course, switching to a Linux Distro coming from Windows can be a little tricky at the begining, but it&amp;rsquo;s just a matter of getting used to it. Soon I discovered that I felt more comfortable using it.</description>
+    </item>
+    
+    <item>
+      <title>Bellman-Ford</title>
+      <link>https://marcbenedi.github.io/blog/posts/algorithms/bellman-ford/</link>
+      <pubDate>Sun, 14 Jul 2019 19:20:38 +0200</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/algorithms/bellman-ford/</guid>
+      <description>This is the first post of a new series called Algorithms. The idea behind it is explaining algorithms that I have previously worked with or new ones I have found interesting 😄. Each post of this series will have the following structure: - Introduction - Idea or concept - Pseudo-code - Implementation in real code
+ Source: techiedelight.com  Introduction In this post I&amp;rsquo;m going to explain the Bellman-Ford algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Android Studio Plugins</title>
+      <link>https://marcbenedi.github.io/blog/posts/android-studio-plugins/</link>
+      <pubDate>Thu, 04 Jul 2019 22:55:24 +0200</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/android-studio-plugins/</guid>
+      <description>Welcome everybody!
+In this post I&amp;rsquo;ll be talking about the most useful plugins I have installed in Android Studio 😀
+As you may know, the main goal of an IDE is being more productive and with a good set of plugins, you will achieve a better productivity.
+Advanced Java Folding Android Material Design Icon Generator CodeGlance Exynap GsonFormat Key promoter Material Theme UI String Manipulation GitFlow </description>
+    </item>
+    
+    <item>
+      <title>Hello world!</title>
+      <link>https://marcbenedi.github.io/blog/posts/hello-world/</link>
+      <pubDate>Tue, 19 Mar 2019 22:28:36 +0100</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/hello-world/</guid>
+      <description>Why? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut velit maximus, malesuada lacus vitae, facilisis felis. Duis a tincidunt augue, id dignissim velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque sed metus vitae tellus posuere facilisis id et leo. Duis quis ex eu neque efficitur luctus. Vivamus sed quam cursus, fringilla eros et, faucibus sapien. Maecenas quis neque luctus, varius lectus sit amet, sollicitudin nulla.</description>
+    </item>
     
   </channel>
 </rss>

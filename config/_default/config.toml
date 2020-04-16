@@ -3,3 +3,4 @@ languageCode = "en-us"
 publishDir = "docs"
 theme = "terminal"
 paginate = 5
+enableEmoji = true

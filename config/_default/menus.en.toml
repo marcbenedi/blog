@@ -1,4 +1,14 @@
 [[main]]
   identifier = "about"
-  name = "Visit marcb.pro page"
+  name = "About me"
   url = "http://marcb.pro/"
+
+# [[main]]
+#   identifier = "algorithms"
+#   name = "Algorithms"
+#   url = "/posts/algorithms"
+
+[[main]]
+  identifier = "linux"
+  name = "Linux"
+  url = "/posts/linux/"
