@@ -1,0 +1,860 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f54e41d5a28, pid=86296, tid=0x00007f54c8d26700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_242-b08) (build 1.8.0_242-b08)
+# Java VM: OpenJDK 64-Bit Server VM (25.242-b08 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x965a28]
+#
+# Core dump written. Default location: /home/marc/Projects/blog/core or core.86296
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f54dc520000):  JavaThread "pool-1-thread-1" [_thread_in_vm, id=86342, stack(0x00007f54c8c26000,0x00007f54c8d27000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000008
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000000da744c50, RCX=0x0000000000000003, RDX=0x00007f54e455a260
+RSP=0x00007f54c8d249e0, RBP=0x00007f54c8d24a00, RSI=0x0000000000000000, RDI=0x0000000000000008
+R8 =0x0000000000000005, R9 =0x00007f54dc520000, R10=0x00000000da744c50, R11=0x00000000da750df8
+R12=0x00007f54dc520000, R13=0x00000000da74e338, R14=0x00000000da747888, R15=0x00007f54dc520000
+RIP=0x00007f54e41d5a28, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f54c8d249e0)
+0x00007f54c8d249e0:   00000000da750550 00000000da744c50
+0x00007f54c8d249f0:   0000000000000000 00000000da74e338
+0x00007f54c8d24a00:   00000000856912f8 00007f54cd100f10
+0x00007f54c8d24a10:   00000000856912f8 00007f54cda8f84c
+0x00007f54c8d24a20:   0000000000000005 000000008831d410
+0x00007f54c8d24a30:   00000000da7206d8 0000000c00000001
+0x00007f54c8d24a40:   0000001600000001 c0f86a0000000000
+0x00007f54c8d24a50:   00000001001f7d40 200035e1200035e1
+0x00007f54c8d24a60:   0000000085691308 000000000000000a
+0x00007f54c8d24a70:   0000000000000005 00000000da7205d8
+0x00007f54c8d24a80:   00000000da720828 0000000500000001
+0x00007f54c8d24a90:   00000000da7205e8 00000000da70d5e0
+0x00007f54c8d24aa0:   00000000da7207d0 00000000da7207b8
+0x00007f54c8d24ab0:   00000000da744d18 00000000da750df8
+0x00007f54c8d24ac0:   00000000da744d38 0000000300000005
+0x00007f54c8d24ad0:   00000000da7206f8 8831d2288831d210
+0x00007f54c8d24ae0:   00000000da7205e8 00000000da70d5e0
+0x00007f54c8d24af0:   0000000000000007 0000000000000021
+0x00007f54c8d24b00:   0000003c00000012 000000008831d410
+0x00007f54c8d24b10:   00000000da750dc0 000000008831d228
+0x00007f54c8d24b20:   0000000085aeb0a8 0000000000000002
+0x00007f54c8d24b30:   00000000da7264d8 0000000000000046
+0x00007f54c8d24b40:   00000000da720598 00000000da71f468
+0x00007f54c8d24b50:   00000000880dc840 00007f54cd554f8c
+0x00007f54c8d24b60:   0000000c0000000c 00000000da720598
+0x00007f54c8d24b70:   00000000da70d5e0 c0f86a0000000000
+0x00007f54c8d24b80:   00000000da7206d8 0000000087b4dba8
+0x00007f54c8d24b90:   00000000da7205d8 00000000da7205e8
+0x00007f54c8d24ba0:   00000000da700d90 0000000100001610
+0x00007f54c8d24bb0:   0000000087835e70 00000000da6dc2c0
+0x00007f54c8d24bc0:   00000001da706e00 00000000da706e00
+0x00007f54c8d24bd0:   000000010000000b 000000000000004a 
+
+Instructions: (pc=0x00007f54e41d5a28)
+0x00007f54e41d5a08:   89 fa 89 c8 80 3a 00 0f 84 63 01 00 00 48 8d 15
+0x00007f54e41d5a18:   44 48 38 00 8b 7f 08 8b 4a 08 48 d3 e7 48 03 3a
+0x00007f54e41d5a28:   48 8b 1f 48 83 ec 08 89 f2 45 89 c1 41 54 41 89
+0x00007f54e41d5a38:   c0 4c 89 d9 4c 89 d6 ff 93 80 00 00 00 49 8b 5c 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00000000da744c50 is an oop
+
+[error occurred during error reporting (printing register info), id 0xb]
+
+Stack: [0x00007f54c8c26000,0x00007f54c8d27000],  sp=0x00007f54c8d249e0,  free space=1018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x965a28]
+v  ~RuntimeStub::_slow_arraycopy_Java
+J 2867 C2 opennlp.tools.ml.BeamSearch.bestSequences(I[Ljava/lang/Object;[Ljava/lang/Object;DLopennlp/tools/util/BeamSearchContextGenerator;Lopennlp/tools/util/SequenceValidator;)[Lopennlp/tools/util/Sequence; (548 bytes) @ 0x00007f54cda8f84c [0x00007f54cda8bac0+0x3d8c]
+J 4236 C2 org.languagetool.chunking.EnglishChunker.getChunkTagsForReadings(Ljava/util/List;)Ljava/util/List; (103 bytes) @ 0x00007f54cd554f8c [0x00007f54cd554540+0xa4c]
+J 4305 C2 org.languagetool.JLanguageTool.getRawAnalyzedSentence(Ljava/lang/String;)Lorg/languagetool/AnalyzedSentence; (480 bytes) @ 0x00007f54cd37f854 [0x00007f54cd37e680+0x11d4]
+J 5115 C2 org.languagetool.JLanguageTool.analyzeSentences(Ljava/util/List;)Ljava/util/List; (116 bytes) @ 0x00007f54cd7118c0 [0x00007f54cd7113a0+0x520]
+J 4864 C1 org.languagetool.JLanguageTool.check(Lorg/languagetool/markup/AnnotatedText;ZLorg/languagetool/JLanguageTool$ParagraphHandling;Lorg/languagetool/RuleMatchListener;)Ljava/util/List; (164 bytes) @ 0x00007f54cdcae46c [0x00007f54cdcaca80+0x19ec]
+J 4700 C1 LanguageToolLanguageServer.validateDocument(Lorg/eclipse/lsp4j/TextDocumentItem;)Ljava/util/List; (256 bytes) @ 0x00007f54cda9d2fc [0x00007f54cda9b380+0x1f7c]
+J 4875 C1 LanguageToolLanguageServer.getIssues(Lorg/eclipse/lsp4j/TextDocumentItem;)Ljava/util/List; (47 bytes) @ 0x00007f54cd7c4eac [0x00007f54cd7c4e20+0x8c]
+J 5029 C1 LanguageToolLanguageServer.publishIssues(Lorg/eclipse/lsp4j/TextDocumentItem;)V (28 bytes) @ 0x00007f54cde15934 [0x00007f54cde158a0+0x94]
+J 4894 C1 LanguageToolLanguageServer$1.didChange(Lorg/eclipse/lsp4j/DidChangeTextDocumentParams;)V (17 bytes) @ 0x00007f54cd98fea4 [0x00007f54cd98fb00+0x3a4]
+J 4902 C1 sun.reflect.GeneratedMethodAccessor2.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (68 bytes) @ 0x00007f54cd98f0ac [0x00007f54cd98ed40+0x36c]
+J 4901 C2 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00007f54cd933720 [0x00007f54cd933680+0xa0]
+J 4458 C1 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(Lorg/eclipse/lsp4j/jsonrpc/services/AnnotationUtil$MethodInfo;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture; (39 bytes) @ 0x00007f54cdd1a484 [0x00007f54cdd1a340+0x144]
+J 4457 C1 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint$$Lambda$8.apply(Ljava/lang/Object;)Ljava/lang/Object; (17 bytes) @ 0x00007f54cda4424c [0x00007f54cda441c0+0x8c]
+J 4692 C1 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(Ljava/lang/String;Ljava/lang/Object;)V (105 bytes) @ 0x00007f54cdc44bac [0x00007f54cdc433a0+0x180c]
+J 4492 C1 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(Lorg/eclipse/lsp4j/jsonrpc/messages/NotificationMessage;)V (59 bytes) @ 0x00007f54cd900534 [0x00007f54cd900340+0x1f4]
+J 4674 C1 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(Lorg/eclipse/lsp4j/jsonrpc/messages/Message;)V (58 bytes) @ 0x00007f54cdc822c4 [0x00007f54cdc81ba0+0x724]
+J 4509 C1 org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(Ljava/io/InputStream;Lorg/eclipse/lsp4j/jsonrpc/json/StreamMessageProducer$Headers;)Z (99 bytes) @ 0x00007f54cd3bedb4 [0x00007f54cd3bdcc0+0x10f4]
+j  org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(Lorg/eclipse/lsp4j/jsonrpc/MessageConsumer;)V+142
+j  org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run()V+30
+j  java.util.concurrent.Executors$RunnableAdapter.call()Ljava/lang/Object;+4
+j  java.util.concurrent.FutureTask.run()V+42
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+95
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x65e49e]
+V  [libjvm.so+0x65bce8]
+V  [libjvm.so+0x65c2c0]
+V  [libjvm.so+0x6ad0ef]
+V  [libjvm.so+0xa111a6]
+V  [libjvm.so+0xa1158c]
+V  [libjvm.so+0x8c9a62]
+C  [libpthread.so.0+0x946f]  start_thread+0xdf
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  ~RuntimeStub::_slow_arraycopy_Java
+J 2867 C2 opennlp.tools.ml.BeamSearch.bestSequences(I[Ljava/lang/Object;[Ljava/lang/Object;DLopennlp/tools/util/BeamSearchContextGenerator;Lopennlp/tools/util/SequenceValidator;)[Lopennlp/tools/util/Sequence; (548 bytes) @ 0x00007f54cda8f84c [0x00007f54cda8bac0+0x3d8c]
+J 4236 C2 org.languagetool.chunking.EnglishChunker.getChunkTagsForReadings(Ljava/util/List;)Ljava/util/List; (103 bytes) @ 0x00007f54cd554f8c [0x00007f54cd554540+0xa4c]
+J 4305 C2 org.languagetool.JLanguageTool.getRawAnalyzedSentence(Ljava/lang/String;)Lorg/languagetool/AnalyzedSentence; (480 bytes) @ 0x00007f54cd37f854 [0x00007f54cd37e680+0x11d4]
+J 5115 C2 org.languagetool.JLanguageTool.analyzeSentences(Ljava/util/List;)Ljava/util/List; (116 bytes) @ 0x00007f54cd7118c0 [0x00007f54cd7113a0+0x520]
+J 4864 C1 org.languagetool.JLanguageTool.check(Lorg/languagetool/markup/AnnotatedText;ZLorg/languagetool/JLanguageTool$ParagraphHandling;Lorg/languagetool/RuleMatchListener;)Ljava/util/List; (164 bytes) @ 0x00007f54cdcae46c [0x00007f54cdcaca80+0x19ec]
+J 4700 C1 LanguageToolLanguageServer.validateDocument(Lorg/eclipse/lsp4j/TextDocumentItem;)Ljava/util/List; (256 bytes) @ 0x00007f54cda9d2fc [0x00007f54cda9b380+0x1f7c]
+J 4875 C1 LanguageToolLanguageServer.getIssues(Lorg/eclipse/lsp4j/TextDocumentItem;)Ljava/util/List; (47 bytes) @ 0x00007f54cd7c4eac [0x00007f54cd7c4e20+0x8c]
+J 5029 C1 LanguageToolLanguageServer.publishIssues(Lorg/eclipse/lsp4j/TextDocumentItem;)V (28 bytes) @ 0x00007f54cde15934 [0x00007f54cde158a0+0x94]
+J 4894 C1 LanguageToolLanguageServer$1.didChange(Lorg/eclipse/lsp4j/DidChangeTextDocumentParams;)V (17 bytes) @ 0x00007f54cd98fea4 [0x00007f54cd98fb00+0x3a4]
+J 4902 C1 sun.reflect.GeneratedMethodAccessor2.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (68 bytes) @ 0x00007f54cd98f0ac [0x00007f54cd98ed40+0x36c]
+J 4901 C2 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00007f54cd933720 [0x00007f54cd933680+0xa0]
+J 4458 C1 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(Lorg/eclipse/lsp4j/jsonrpc/services/AnnotationUtil$MethodInfo;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture; (39 bytes) @ 0x00007f54cdd1a484 [0x00007f54cdd1a340+0x144]
+J 4457 C1 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint$$Lambda$8.apply(Ljava/lang/Object;)Ljava/lang/Object; (17 bytes) @ 0x00007f54cda4424c [0x00007f54cda441c0+0x8c]
+J 4692 C1 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(Ljava/lang/String;Ljava/lang/Object;)V (105 bytes) @ 0x00007f54cdc44bac [0x00007f54cdc433a0+0x180c]
+J 4492 C1 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(Lorg/eclipse/lsp4j/jsonrpc/messages/NotificationMessage;)V (59 bytes) @ 0x00007f54cd900534 [0x00007f54cd900340+0x1f4]
+J 4674 C1 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(Lorg/eclipse/lsp4j/jsonrpc/messages/Message;)V (58 bytes) @ 0x00007f54cdc822c4 [0x00007f54cdc81ba0+0x724]
+J 4509 C1 org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(Ljava/io/InputStream;Lorg/eclipse/lsp4j/jsonrpc/json/StreamMessageProducer$Headers;)Z (99 bytes) @ 0x00007f54cd3bedb4 [0x00007f54cd3bdcc0+0x10f4]
+j  org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(Lorg/eclipse/lsp4j/jsonrpc/MessageConsumer;)V+142
+j  org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run()V+30
+j  java.util.concurrent.Executors$RunnableAdapter.call()Ljava/lang/Object;+4
+j  java.util.concurrent.FutureTask.run()V+42
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+95
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f54dc011000 JavaThread "DestroyJavaVM" [_thread_blocked, id=86310, stack(0x00007f54e362a000,0x00007f54e372a000)]
+=>0x00007f54dc520000 JavaThread "pool-1-thread-1" [_thread_in_vm, id=86342, stack(0x00007f54c8c26000,0x00007f54c8d27000)]
+  0x00007f54dc0ce800 JavaThread "Service Thread" daemon [_thread_blocked, id=86329, stack(0x00007f54c8f5d000,0x00007f54c905e000)]
+  0x00007f54dc0c3800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=86328, stack(0x00007f54c905f000,0x00007f54c915f000)]
+  0x00007f54dc0c1800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=86327, stack(0x00007f54c9160000,0x00007f54c9260000)]
+  0x00007f54dc0be800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=86326, stack(0x00007f54e00d2000,0x00007f54e01d2000)]
+  0x00007f54dc0bc800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=86325, stack(0x00007f54e01d2000,0x00007f54e02d3000)]
+  0x00007f54dc08c000 JavaThread "Finalizer" daemon [_thread_blocked, id=86323, stack(0x00007f54e0606000,0x00007f54e0707000)]
+  0x00007f54dc087800 JavaThread "Reference Handler" daemon [_thread_blocked, id=86322, stack(0x00007f54e0707000,0x00007f54e0808000)]
+
+Other Threads:
+  0x00007f54dc07e000 VMThread [stack: 0x00007f54e0809000,0x00007f54e0909000] [id=86317]
+  0x00007f54dc0d1000 WatcherThread [stack: 0x00007f54c8e5d000,0x00007f54c8f5d000] [id=86330]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000084c00000, size: 1972 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 175104K, used 59681K [0x00000000d6f00000, 0x00000000eef80000, 0x0000000100000000)
+  eden space 174592K, 34% used [0x00000000d6f00000,0x00000000da8f86e8,0x00000000e1980000)
+  from space 512K, 62% used [0x00000000eed00000,0x00000000eed50000,0x00000000eed80000)
+  to   space 1536K, 0% used [0x00000000eee00000,0x00000000eee00000,0x00000000eef80000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+
+Card table byte_map: [0x00007f54e2e1c000,0x00007f54e31f7000] byte_map_base: 0x00007f54e29f6000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f54e4581cc0
+ Begin Bits: [0x00007f54c9260000, 0x00007f54cb130000)
+ End Bits:   [0x00007f54cb130000, 0x00007f54cd000000)
+
+Polling page: 0x00007f54e4838000
+
+CodeCache: size=245760Kb used=14543Kb max_used=14633Kb free=231216Kb
+ bounds [0x00007f54cd000000, 0x00007f54cde70000, 0x00007f54dc000000]
+ total_blobs=4010 nmethods=3629 adapters=295
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1572.354 Thread 0x00007f54dc0c1800 5141   !   4       com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter::read (116 bytes)
+Event: 1572.418 Thread 0x00007f54dc0c1800 nmethod 5141 0x00007f54cd819710 code [0x00007f54cd819b20, 0x00007f54cd81b170]
+Event: 1572.688 Thread 0x00007f54dc0c3800 5142       3       java.util.regex.Pattern$SingleI::isSatisfiedBy (22 bytes)
+Event: 1572.688 Thread 0x00007f54dc0c3800 nmethod 5142 0x00007f54cdbd6250 code [0x00007f54cdbd63c0, 0x00007f54cdbd65b0]
+Event: 1582.761 Thread 0x00007f54dc0be800 5143       4       com.vladsch.flexmark.util.html.Escaping::collapseWhitespace (137 bytes)
+Event: 1582.826 Thread 0x00007f54dc0be800 nmethod 5143 0x00007f54cde00d50 code [0x00007f54cde00f40, 0x00007f54cde02b38]
+Event: 1583.450 Thread 0x00007f54dc0c1800 5144       4       org.languagetool.rules.CommaWhitespaceRule::match (459 bytes)
+Event: 1583.486 Thread 0x00007f54dc0c1800 nmethod 5144 0x00007f54cddcd890 code [0x00007f54cddcdb80, 0x00007f54cddcf3d0]
+Event: 1585.319 Thread 0x00007f54dc0be800 5145       4       com.vladsch.flexmark.internal.DocumentParser::preProcessParagraphs (121 bytes)
+Event: 1585.372 Thread 0x00007f54dc0be800 nmethod 5145 0x00007f54cd70db90 code [0x00007f54cd70de40, 0x00007f54cd70ef68]
+
+GC Heap History (10 events):
+Event: 1587.178 GC heap before
+{Heap before GC invocations=802 (full 1):
+ PSYoungGen      total 213504K, used 213376K [0x00000000d6f00000, 0x00000000ef200000, 0x0000000100000000)
+  eden space 212480K, 100% used [0x00000000d6f00000,0x00000000e3e80000,0x00000000e3e80000)
+  from space 1024K, 87% used [0x00000000ef100000,0x00000000ef1e0000,0x00000000ef200000)
+  to   space 1536K, 0% used [0x00000000eef00000,0x00000000eef00000,0x00000000ef080000)
+ ParOldGen       total 147968K, used 81507K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b98fc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+Event: 1587.181 GC heap after
+Heap after GC invocations=802 (full 1):
+ PSYoungGen      total 205312K, used 768K [0x00000000d6f00000, 0x00000000ef180000, 0x0000000100000000)
+  eden space 204288K, 0% used [0x00000000d6f00000,0x00000000d6f00000,0x00000000e3680000)
+  from space 1024K, 75% used [0x00000000eef00000,0x00000000eefc0000,0x00000000ef000000)
+  to   space 1536K, 0% used [0x00000000ef000000,0x00000000ef000000,0x00000000ef180000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+}
+Event: 1587.543 GC heap before
+{Heap before GC invocations=803 (full 1):
+ PSYoungGen      total 205312K, used 205056K [0x00000000d6f00000, 0x00000000ef180000, 0x0000000100000000)
+  eden space 204288K, 100% used [0x00000000d6f00000,0x00000000e3680000,0x00000000e3680000)
+  from space 1024K, 75% used [0x00000000eef00000,0x00000000eefc0000,0x00000000ef000000)
+  to   space 1536K, 0% used [0x00000000ef000000,0x00000000ef000000,0x00000000ef180000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+Event: 1587.546 GC heap after
+Heap after GC invocations=803 (full 1):
+ PSYoungGen      total 197120K, used 928K [0x00000000d6f00000, 0x00000000ef100000, 0x0000000100000000)
+  eden space 196096K, 0% used [0x00000000d6f00000,0x00000000d6f00000,0x00000000e2e80000)
+  from space 1024K, 90% used [0x00000000ef000000,0x00000000ef0e8000,0x00000000ef100000)
+  to   space 1536K, 0% used [0x00000000eee00000,0x00000000eee00000,0x00000000eef80000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+}
+Event: 1587.922 GC heap before
+{Heap before GC invocations=804 (full 1):
+ PSYoungGen      total 197120K, used 197024K [0x00000000d6f00000, 0x00000000ef100000, 0x0000000100000000)
+  eden space 196096K, 100% used [0x00000000d6f00000,0x00000000e2e80000,0x00000000e2e80000)
+  from space 1024K, 90% used [0x00000000ef000000,0x00000000ef0e8000,0x00000000ef100000)
+  to   space 1536K, 0% used [0x00000000eee00000,0x00000000eee00000,0x00000000eef80000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+Event: 1587.924 GC heap after
+Heap after GC invocations=804 (full 1):
+ PSYoungGen      total 189440K, used 640K [0x00000000d6f00000, 0x00000000ef080000, 0x0000000100000000)
+  eden space 188416K, 0% used [0x00000000d6f00000,0x00000000d6f00000,0x00000000e2700000)
+  from space 1024K, 62% used [0x00000000eee00000,0x00000000eeea0000,0x00000000eef00000)
+  to   space 1536K, 0% used [0x00000000eef00000,0x00000000eef00000,0x00000000ef080000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+}
+Event: 1588.274 GC heap before
+{Heap before GC invocations=805 (full 1):
+ PSYoungGen      total 189440K, used 189056K [0x00000000d6f00000, 0x00000000ef080000, 0x0000000100000000)
+  eden space 188416K, 100% used [0x00000000d6f00000,0x00000000e2700000,0x00000000e2700000)
+  from space 1024K, 62% used [0x00000000eee00000,0x00000000eeea0000,0x00000000eef00000)
+  to   space 1536K, 0% used [0x00000000eef00000,0x00000000eef00000,0x00000000ef080000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+Event: 1588.276 GC heap after
+Heap after GC invocations=805 (full 1):
+ PSYoungGen      total 182272K, used 896K [0x00000000d6f00000, 0x00000000ef000000, 0x0000000100000000)
+  eden space 181248K, 0% used [0x00000000d6f00000,0x00000000d6f00000,0x00000000e2000000)
+  from space 1024K, 87% used [0x00000000eef00000,0x00000000eefe0000,0x00000000ef000000)
+  to   space 1536K, 0% used [0x00000000eed00000,0x00000000eed00000,0x00000000eee80000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+}
+Event: 1588.589 GC heap before
+{Heap before GC invocations=806 (full 1):
+ PSYoungGen      total 182272K, used 182144K [0x00000000d6f00000, 0x00000000ef000000, 0x0000000100000000)
+  eden space 181248K, 100% used [0x00000000d6f00000,0x00000000e2000000,0x00000000e2000000)
+  from space 1024K, 87% used [0x00000000eef00000,0x00000000eefe0000,0x00000000ef000000)
+  to   space 1536K, 0% used [0x00000000eed00000,0x00000000eed00000,0x00000000eee80000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+Event: 1588.592 GC heap after
+Heap after GC invocations=806 (full 1):
+ PSYoungGen      total 175104K, used 320K [0x00000000d6f00000, 0x00000000eef80000, 0x0000000100000000)
+  eden space 174592K, 0% used [0x00000000d6f00000,0x00000000d6f00000,0x00000000e1980000)
+  from space 512K, 62% used [0x00000000eed00000,0x00000000eed50000,0x00000000eed80000)
+  to   space 1536K, 0% used [0x00000000eee00000,0x00000000eee00000,0x00000000eef80000)
+ ParOldGen       total 147968K, used 81523K [0x0000000084c00000, 0x000000008dc80000, 0x00000000d6f00000)
+  object space 147968K, 55% used [0x0000000084c00000,0x0000000089b9cfc8,0x000000008dc80000)
+ Metaspace       used 19766K, capacity 20140K, committed 20352K, reserved 1067008K
+  class space    used 2036K, capacity 2134K, committed 2176K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 1297.428 Thread 0x00007f54dc520000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f54cd22807c method=java.util.regex.Pattern$CharProperty$1.isSatisfiedBy(I)Z @ 5
+Event: 1311.245 Thread 0x00007f54dc520000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f54cd22807c method=java.util.regex.Pattern$CharProperty$1.isSatisfiedBy(I)Z @ 5
+Event: 1312.013 Thread 0x00007f54dc520000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f54cd22807c method=java.util.regex.Pattern$CharProperty$1.isSatisfiedBy(I)Z @ 5
+Event: 1529.795 Thread 0x00007f54dc520000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f54cdbe9078 method=java.util.regex.Pattern$CharProperty$1.isSatisfiedBy(I)Z @ 5
+Event: 1530.575 Thread 0x00007f54dc520000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f54cdc4e20c method=java.util.regex.Pattern$CharProperty$1.isSatisfiedBy(I)Z @ 5
+Event: 1531.415 Thread 0x00007f54dc520000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f54cdc4e20c method=java.util.regex.Pattern$CharProperty$1.isSatisfiedBy(I)Z @ 5
+Event: 1532.273 Thread 0x00007f54dc520000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f54cdc4e20c method=java.util.regex.Pattern$CharProperty$1.isSatisfiedBy(I)Z @ 5
+Event: 1533.041 Thread 0x00007f54dc520000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f54cdc4e20c method=java.util.regex.Pattern$CharProperty$1.isSatisfiedBy(I)Z @ 5
+Event: 1569.248 Thread 0x00007f54dc520000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f54cd8351c0 method=java.util.regex.Pattern$SingleI.isSatisfiedBy(I)Z @ 5
+Event: 1571.906 Thread 0x00007f54dc520000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f54cde5c4e8 method=org.languagetool.rules.CommaWhitespaceRule.isRightBracket(Ljava/lang/String;)Z @ 18
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 2.449 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cd41341b to 0x00007f54cd413a95
+Event: 5.226 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cd240af6 to 0x00007f54cd240edd
+Event: 5.705 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cd572bec to 0x00007f54cd572c1d
+Event: 6.637 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cd887d0a to 0x00007f54cd887f4d
+Event: 6.660 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cd8a2593 to 0x00007f54cd8a2705
+Event: 59.064 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cd9aa37c to 0x00007f54cd9ab595
+Event: 68.026 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cda2d7c7 to 0x00007f54cda2daf1
+Event: 89.633 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cdbdf3e8 to 0x00007f54cdbdf741
+Event: 102.993 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cd744fad to 0x00007f54cd748211
+Event: 397.598 Thread 0x00007f54dc520000 Implicit null exception at 0x00007f54cd8ae530 to 0x00007f54cd8afb55
+
+Events (10 events):
+Event: 1587.178 Executing VM operation: ParallelGCFailedAllocation
+Event: 1587.181 Executing VM operation: ParallelGCFailedAllocation done
+Event: 1587.543 Executing VM operation: ParallelGCFailedAllocation
+Event: 1587.546 Executing VM operation: ParallelGCFailedAllocation done
+Event: 1587.922 Executing VM operation: ParallelGCFailedAllocation
+Event: 1587.924 Executing VM operation: ParallelGCFailedAllocation done
+Event: 1588.273 Executing VM operation: ParallelGCFailedAllocation
+Event: 1588.276 Executing VM operation: ParallelGCFailedAllocation done
+Event: 1588.589 Executing VM operation: ParallelGCFailedAllocation
+Event: 1588.592 Executing VM operation: ParallelGCFailedAllocation done
+
+
+Dynamic libraries:
+84c00000-8dc80000 rw-p 00000000 00:00 0 
+8dc80000-d6f00000 ---p 00000000 00:00 0 
+d6f00000-eef80000 rw-p 00000000 00:00 0 
+eef80000-100000000 ---p 00000000 00:00 0 
+100000000-100220000 rw-p 00000000 00:00 0 
+100220000-140000000 ---p 00000000 00:00 0 
+55fedb538000-55fedb539000 r--p 00000000 08:03 4985801                    /usr/lib/jvm/java-8-openjdk/jre/bin/java
+55fedb539000-55fedb53a000 r-xp 00001000 08:03 4985801                    /usr/lib/jvm/java-8-openjdk/jre/bin/java
+55fedb53a000-55fedb53b000 r--p 00002000 08:03 4985801                    /usr/lib/jvm/java-8-openjdk/jre/bin/java
+55fedb53b000-55fedb53c000 r--p 00002000 08:03 4985801                    /usr/lib/jvm/java-8-openjdk/jre/bin/java
+55fedb53c000-55fedb53d000 rw-p 00003000 08:03 4985801                    /usr/lib/jvm/java-8-openjdk/jre/bin/java
+55fedbaad000-55fedbaed000 rw-p 00000000 00:00 0                          [heap]
+7f548c000000-7f548c4a9000 rw-p 00000000 00:00 0 
+7f548c4a9000-7f5490000000 ---p 00000000 00:00 0 
+7f54927ff000-7f5494000000 rw-p 00000000 00:00 0 
+7f5494000000-7f5494021000 rw-p 00000000 00:00 0 
+7f5494021000-7f5498000000 ---p 00000000 00:00 0 
+7f5498000000-7f5498021000 rw-p 00000000 00:00 0 
+7f5498021000-7f549c000000 ---p 00000000 00:00 0 
+7f549c000000-7f549d4fd000 rw-p 00000000 00:00 0 
+7f549d4fd000-7f54a0000000 ---p 00000000 00:00 0 
+7f54a0000000-7f54a0b0b000 rw-p 00000000 00:00 0 
+7f54a0b0b000-7f54a4000000 ---p 00000000 00:00 0 
+7f54a4000000-7f54a4021000 rw-p 00000000 00:00 0 
+7f54a4021000-7f54a8000000 ---p 00000000 00:00 0 
+7f54a8000000-7f54a92bb000 rw-p 00000000 00:00 0 
+7f54a92bb000-7f54ac000000 ---p 00000000 00:00 0 
+7f54ac000000-7f54ac021000 rw-p 00000000 00:00 0 
+7f54ac021000-7f54b0000000 ---p 00000000 00:00 0 
+7f54b0000000-7f54b0021000 rw-p 00000000 00:00 0 
+7f54b0021000-7f54b4000000 ---p 00000000 00:00 0 
+7f54b4000000-7f54b4021000 rw-p 00000000 00:00 0 
+7f54b4021000-7f54b8000000 ---p 00000000 00:00 0 
+7f54b8000000-7f54b8021000 rw-p 00000000 00:00 0 
+7f54b8021000-7f54bc000000 ---p 00000000 00:00 0 
+7f54bc000000-7f54bc021000 rw-p 00000000 00:00 0 
+7f54bc021000-7f54c0000000 ---p 00000000 00:00 0 
+7f54c0000000-7f54c0021000 rw-p 00000000 00:00 0 
+7f54c0021000-7f54c4000000 ---p 00000000 00:00 0 
+7f54c4000000-7f54c4021000 rw-p 00000000 00:00 0 
+7f54c4021000-7f54c8000000 ---p 00000000 00:00 0 
+7f54c804c000-7f54c820c000 rw-p 00000000 00:00 0 
+7f54c820c000-7f54c824c000 ---p 00000000 00:00 0 
+7f54c83d2000-7f54c85d2000 rw-p 00000000 00:00 0 
+7f54c85d2000-7f54c87d2000 rw-p 00000000 00:00 0 
+7f54c87d2000-7f54c89d2000 rw-p 00000000 00:00 0 
+7f54c89d2000-7f54c89e5000 r--s 00346000 08:03 4985902                    /usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar
+7f54c89e5000-7f54c89e6000 r--s 0056f000 08:03 14161547                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-en-3.8.0/lib/opennlp-postag-models-1.5.jar
+7f54c89e6000-7f54c89fa000 r--s 000fb000 08:03 14161549                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-en-3.8.0/lib/opennlp-tools-1.7.2.jar
+7f54c89fa000-7f54c8bfa000 rw-p 00000000 00:00 0 
+7f54c8bfa000-7f54c8bfe000 r--s 003c2000 08:03 14161545                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-en-3.8.0/lib/language-en-3.8.jar
+7f54c8bfe000-7f54c8bff000 r--s 00271000 08:03 14161546                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-en-3.8.0/lib/opennlp-chunk-models-1.5.jar
+7f54c8bff000-7f54c8c00000 r--s 0006b000 08:03 14161548                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-en-3.8.0/lib/opennlp-tokenize-models-1.5.jar
+7f54c8c00000-7f54c8c01000 r--s 00005000 08:03 14161632                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/org.eclipse.lsp4j.generator-0.2.0.jar
+7f54c8c01000-7f54c8c1c000 r--s 00394000 08:03 4985865                    /usr/lib/jvm/java-8-openjdk/jre/lib/ext/cldrdata.jar
+7f54c8c1c000-7f54c8c26000 r--s 00116000 08:03 4985868                    /usr/lib/jvm/java-8-openjdk/jre/lib/ext/localedata.jar
+7f54c8c26000-7f54c8c29000 ---p 00000000 00:00 0 
+7f54c8c29000-7f54c8d27000 rw-p 00000000 00:00 0 
+7f54c8d27000-7f54c8d29000 r--s 00016000 08:03 4985887                    /usr/lib/jvm/java-8-openjdk/jre/lib/jce.jar
+7f54c8d29000-7f54c8d2e000 r--s 000a3000 08:03 4985889                    /usr/lib/jvm/java-8-openjdk/jre/lib/jsse.jar
+7f54c8d2e000-7f54c8d33000 r--p 00000000 08:03 4985839                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f54c8d33000-7f54c8d42000 r-xp 00005000 08:03 4985839                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f54c8d42000-7f54c8d46000 r--p 00014000 08:03 4985839                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f54c8d46000-7f54c8d47000 r--p 00017000 08:03 4985839                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f54c8d47000-7f54c8d48000 rw-p 00018000 08:03 4985839                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f54c8d48000-7f54c8d4f000 r--p 00000000 08:03 4985840                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f54c8d4f000-7f54c8d57000 r-xp 00007000 08:03 4985840                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f54c8d57000-7f54c8d5a000 r--p 0000f000 08:03 4985840                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f54c8d5a000-7f54c8d5b000 ---p 00012000 08:03 4985840                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f54c8d5b000-7f54c8d5c000 r--p 00012000 08:03 4985840                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f54c8d5c000-7f54c8d5d000 rw-p 00013000 08:03 4985840                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f54c8d5d000-7f54c8d5f000 r--s 00003000 08:03 14161620                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/languagetool-languageserver-0.0-SNAPSHOT.jar
+7f54c8d5f000-7f54c8d86000 r--s 0021c000 08:03 14161622                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/lucene-core-5.5.3.jar
+7f54c8d86000-7f54c8d88000 r--s 00002000 08:03 14161586                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-ins-0.19.1.jar
+7f54c8d88000-7f54c8d8a000 r--s 00039000 08:03 14161602                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-test-util-0.19.1.jar
+7f54c8d8a000-7f54c8d8c000 r--s 00006000 08:03 14161583                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-gfm-strikethrough-0.19.1.jar
+7f54c8d8c000-7f54c8d8d000 r--s 00004000 08:03 14161628                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/openhtmltopdf-jsoup-dom-converter-0.0.1-RC9.jar
+7f54c8d8d000-7f54c8d8f000 r--s 00005000 08:03 14161585                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-gfm-tasklist-0.19.1.jar
+7f54c8d8f000-7f54c8d90000 r--s 0000b000 08:03 14161580                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-emoji-0.19.1.jar
+7f54c8d90000-7f54c8d95000 r--s 00034000 08:03 14161606                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/gson-2.7.jar
+7f54c8d95000-7f54c8d99000 r--s 00107000 08:03 14161614                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/jna-4.4.0.jar
+7f54c8d99000-7f54c8d9e000 r--s 00024000 08:03 14161634                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/org.eclipse.xtend.lib-2.12.0.jar
+7f54c8d9e000-7f54c8d9f000 r--s 00004000 08:03 14161623                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/morfologik-fsa-2.1.3.jar
+7f54c8d9f000-7f54c8da1000 r--s 0000e000 08:03 14161572                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/commons-logging-1.2.jar
+7f54c8da1000-7f54c8da5000 r--s 001c7000 08:03 14161618                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/language-detector-0.6.jar
+7f54c8da5000-7f54c8da7000 r--s 00003000 08:03 14161587                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-jekyll-front-matter-0.19.1.jar
+7f54c8da7000-7f54c8da9000 r--s 0000c000 08:03 14161626                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/morfologik-stemming-2.1.3.jar
+7f54c8da9000-7f54c8dab000 r--s 00007000 08:03 14161575                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-abbreviation-0.19.1.jar
+7f54c8dab000-7f54c8dad000 r--s 00002000 08:03 14161577                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-aside-0.19.1.jar
+7f54c8dad000-7f54c8db3000 r--s 00050000 08:03 14161616                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/jsoup-1.10.2.jar
+7f54c8db3000-7f54c8db9000 r--s 0003e000 08:03 14161603                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-util-0.19.1.jar
+7f54c8db9000-7f54c8dbb000 r--s 00000000 08:03 14161600                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-pdf-converter-0.19.1.jar
+7f54c8dbb000-7f54c8dbf000 r--s 00021000 08:03 14161636                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/org.eclipse.xtext.xbase.lib-2.12.0.jar
+7f54c8dbf000-7f54c8dc7000 r--s 0006e000 08:03 14161571                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/commons-lang3-3.5.jar
+7f54c8dc7000-7f54c8dc8000 r--s 00000000 08:03 14161574                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-all-0.19.1.jar
+7f54c8dc8000-7f54c8dd0000 r--s 0007b000 08:03 14161619                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/languagetool-core-3.8.jar
+7f54c8dd0000-7f54c8dd8000 r--s 00045000 08:03 14161617                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/junit-4.12.jar
+7f54c8dd8000-7f54c8dd9000 r--s 00001000 08:03 14161578                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-autolink-0.19.1.jar
+7f54c8dd9000-7f54c8dda000 r--s 00003000 08:03 14161569                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/autolink-0.6.0.jar
+7f54c8dda000-7f54c8ddc000 r--s 0000d000 08:03 14161591                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-tables-0.19.1.jar
+7f54c8ddc000-7f54c8df2000 r--s 00241000 08:03 14161637                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/pdfbox-2.0.4.jar
+7f54c8df2000-7f54c8df7000 r--s 00039000 08:03 14161570                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/berkeleylm-1.1.2.jar
+7f54c8df7000-7f54c8e5c000 r--s 00abc000 08:03 14161610                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/icu4j-58.1.jar
+7f54c8e5c000-7f54c8e5d000 ---p 00000000 00:00 0 
+7f54c8e5d000-7f54c8f5d000 rw-p 00000000 00:00 0 
+7f54c8f5d000-7f54c8f60000 ---p 00000000 00:00 0 
+7f54c8f60000-7f54c905e000 rw-p 00000000 00:00 0 
+7f54c905e000-7f54c905f000 ---p 00000000 00:00 0 
+7f54c905f000-7f54c9062000 ---p 00000000 00:00 0 
+7f54c9062000-7f54c915f000 rw-p 00000000 00:00 0 
+7f54c915f000-7f54c9160000 ---p 00000000 00:00 0 
+7f54c9160000-7f54c9163000 ---p 00000000 00:00 0 
+7f54c9163000-7f54cd000000 rw-p 00000000 00:00 0 
+7f54cd000000-7f54cde70000 rwxp 00000000 00:00 0 
+7f54cde70000-7f54dc000000 ---p 00000000 00:00 0 
+7f54dc000000-7f54dc526000 rw-p 00000000 00:00 0 
+7f54dc526000-7f54e0000000 ---p 00000000 00:00 0 
+7f54e0000000-7f54e0002000 r--s 00003000 08:03 14161596                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-yaml-front-matter-0.19.1.jar
+7f54e0002000-7f54e0004000 r--s 00009000 08:03 14161608                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/hamcrest-core-1.3.jar
+7f54e0004000-7f54e0006000 r--s 00010000 08:03 14161597                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-formatter-0.19.1.jar
+7f54e0006000-7f54e0007000 r--s 00004000 08:03 14161568                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/annotations-12.0.jar
+7f54e0007000-7f54e0009000 r--s 0001c000 08:03 14161629                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/openhtmltopdf-pdfbox-0.0.1-RC9.jar
+7f54e0009000-7f54e000b000 r--s 00013000 08:03 14161633                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/org.eclipse.lsp4j.jsonrpc-0.2.0.jar
+7f54e000b000-7f54e000d000 r--s 00003000 08:03 14161576                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-anchorlink-0.19.1.jar
+7f54e000d000-7f54e001f000 r--s 0011c000 08:03 14161613                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/jackson-databind-2.8.4.jar
+7f54e001f000-7f54e0020000 r--s 00006000 08:03 14161598                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-html-parser-0.19.1.jar
+7f54e0020000-7f54e0022000 r--s 00002000 08:03 14161590                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-superscript-0.19.1.jar
+7f54e0022000-7f54e0023000 r--s 00001000 08:03 14161601                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-profile-pegdown-0.19.1.jar
+7f54e0023000-7f54e0029000 r--s 00163000 08:03 14161605                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/fontbox-2.0.4.jar
+7f54e0029000-7f54e002b000 r--s 00008000 08:03 14161582                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-footnotes-0.19.1.jar
+7f54e002b000-7f54e002e000 r--s 0000b000 08:03 14161611                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/jackson-annotations-2.8.0.jar
+7f54e002e000-7f54e0030000 r--s 00005000 08:03 14161594                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-wikilink-0.19.1.jar
+7f54e0030000-7f54e0032000 r--s 00008000 08:03 14161589                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-spec-example-0.19.1.jar
+7f54e0032000-7f54e003a000 r--s 00062000 08:03 14161621                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/lucene-backward-codecs-5.5.3.jar
+7f54e003a000-7f54e003b000 r--s 00007000 08:03 14161624                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/morfologik-fsa-builders-2.1.3.jar
+7f54e003b000-7f54e003d000 r--s 00008000 08:03 14161604                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-youtrack-converter-0.19.1.jar
+7f54e003d000-7f54e003f000 r--s 00004000 08:03 14161588                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-jekyll-tag-0.19.1.jar
+7f54e003f000-7f54e0041000 r--s 00002000 08:03 14161581                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-escaped-character-0.19.1.jar
+7f54e0041000-7f54e0043000 r--s 00008000 08:03 14161599                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-jira-converter-0.19.1.jar
+7f54e0043000-7f54e0064000 r--s 00177000 08:03 14161609                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/hppc-0.7.2.jar
+7f54e0064000-7f54e0067000 r--s 00011000 08:03 14161638                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/segment-2.0.0.jar
+7f54e0067000-7f54e0068000 r--s 00005000 08:03 14161630                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/openhtmltopdf-rtl-support-0.0.1-RC9.jar
+7f54e0068000-7f54e006c000 r--s 00041000 08:03 14161612                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/jackson-core-2.8.4.jar
+7f54e006c000-7f54e0070000 r--s 00024000 08:03 14161615                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/jsonic-1.2.11.jar
+7f54e0070000-7f54e0084000 r--s 00119000 08:03 14161627                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/openhtmltopdf-core-0.0.1-RC9.jar
+7f54e0084000-7f54e0086000 r--s 00004000 08:03 14161593                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-typographic-0.19.1.jar
+7f54e0086000-7f54e0088000 r--s 00006000 08:03 14161595                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-xwiki-macros-0.19.1.jar
+7f54e0088000-7f54e008b000 r--s 00012000 08:03 14161592                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-toc-0.19.1.jar
+7f54e008b000-7f54e0094000 r--s 0004f000 08:03 14161573                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-0.19.1.jar
+7f54e0094000-7f54e0098000 r--s 0000f000 08:03 14161635                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/org.eclipse.xtend.lib.macro-2.12.0.jar
+7f54e0098000-7f54e009e000 r--s 0003e000 08:03 14161631                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/org.eclipse.lsp4j-0.2.0.jar
+7f54e009e000-7f54e00a0000 r--s 00007000 08:03 14161584                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-gfm-tables-0.19.1.jar
+7f54e00a0000-7f54e00cf000 r--s 00239000 08:03 14161607                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/guava-21.0.jar
+7f54e00cf000-7f54e00d1000 r--s 00006000 08:03 14161639                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/slf4j-api-1.7.6.jar
+7f54e00d1000-7f54e00d2000 ---p 00000000 00:00 0 
+7f54e00d2000-7f54e00d5000 ---p 00000000 00:00 0 
+7f54e00d5000-7f54e01d2000 rw-p 00000000 00:00 0 
+7f54e01d2000-7f54e01d5000 ---p 00000000 00:00 0 
+7f54e01d5000-7f54e02d3000 rw-p 00000000 00:00 0 
+7f54e02d3000-7f54e0606000 r--p 00000000 08:03 4519257                    /usr/lib/locale/locale-archive
+7f54e0606000-7f54e0609000 ---p 00000000 00:00 0 
+7f54e0609000-7f54e0707000 rw-p 00000000 00:00 0 
+7f54e0707000-7f54e070a000 ---p 00000000 00:00 0 
+7f54e070a000-7f54e0808000 rw-p 00000000 00:00 0 
+7f54e0808000-7f54e0809000 ---p 00000000 00:00 0 
+7f54e0809000-7f54e190b000 rw-p 00000000 00:00 0 
+7f54e190b000-7f54e1adb000 r--s 03c68000 08:03 4985903                    /usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar
+7f54e1adb000-7f54e2786000 rw-p 00000000 00:00 0 
+7f54e2786000-7f54e2787000 ---p 00000000 00:00 0 
+7f54e2787000-7f54e2887000 rw-p 00000000 00:00 0 
+7f54e2887000-7f54e2888000 ---p 00000000 00:00 0 
+7f54e2888000-7f54e2988000 rw-p 00000000 00:00 0 
+7f54e2988000-7f54e2989000 ---p 00000000 00:00 0 
+7f54e2989000-7f54e2a89000 rw-p 00000000 00:00 0 
+7f54e2a89000-7f54e2a8a000 ---p 00000000 00:00 0 
+7f54e2a8a000-7f54e2bd3000 rw-p 00000000 00:00 0 
+7f54e2bd3000-7f54e2e1c000 ---p 00000000 00:00 0 
+7f54e2e1c000-7f54e2e65000 rw-p 00000000 00:00 0 
+7f54e2e65000-7f54e30ad000 ---p 00000000 00:00 0 
+7f54e30ad000-7f54e316e000 rw-p 00000000 00:00 0 
+7f54e316e000-7f54e31f6000 ---p 00000000 00:00 0 
+7f54e31f6000-7f54e3231000 rw-p 00000000 00:00 0 
+7f54e3231000-7f54e35b7000 ---p 00000000 00:00 0 
+7f54e35b7000-7f54e35ba000 r--p 00000000 08:03 4459926                    /usr/lib/libnss_files-2.31.so
+7f54e35ba000-7f54e35c1000 r-xp 00003000 08:03 4459926                    /usr/lib/libnss_files-2.31.so
+7f54e35c1000-7f54e35c3000 r--p 0000a000 08:03 4459926                    /usr/lib/libnss_files-2.31.so
+7f54e35c3000-7f54e35c4000 r--p 0000b000 08:03 4459926                    /usr/lib/libnss_files-2.31.so
+7f54e35c4000-7f54e35c5000 rw-p 0000c000 08:03 4459926                    /usr/lib/libnss_files-2.31.so
+7f54e35c5000-7f54e35cb000 rw-p 00000000 00:00 0 
+7f54e35cb000-7f54e35cc000 r--s 00003000 08:03 14161625                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/morfologik-speller-2.1.3.jar
+7f54e35cc000-7f54e35cf000 r--s 00007000 08:03 14161579                   /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-definition-0.19.1.jar
+7f54e35cf000-7f54e361e000 rw-p 00000000 00:00 0 
+7f54e361e000-7f54e3621000 r--p 00000000 08:03 4459949                    /usr/lib/librt-2.31.so
+7f54e3621000-7f54e3625000 r-xp 00003000 08:03 4459949                    /usr/lib/librt-2.31.so
+7f54e3625000-7f54e3626000 r--p 00007000 08:03 4459949                    /usr/lib/librt-2.31.so
+7f54e3626000-7f54e3627000 ---p 00008000 08:03 4459949                    /usr/lib/librt-2.31.so
+7f54e3627000-7f54e3628000 r--p 00008000 08:03 4459949                    /usr/lib/librt-2.31.so
+7f54e3628000-7f54e3629000 rw-p 00009000 08:03 4459949                    /usr/lib/librt-2.31.so
+7f54e3629000-7f54e362a000 ---p 00000000 00:00 0 
+7f54e362a000-7f54e362d000 ---p 00000000 00:00 0 
+7f54e362d000-7f54e372a000 rw-p 00000000 00:00 0 
+7f54e372a000-7f54e3739000 r--p 00000000 08:03 4459896                    /usr/lib/libm-2.31.so
+7f54e3739000-7f54e37d5000 r-xp 0000f000 08:03 4459896                    /usr/lib/libm-2.31.so
+7f54e37d5000-7f54e386e000 r--p 000ab000 08:03 4459896                    /usr/lib/libm-2.31.so
+7f54e386e000-7f54e386f000 r--p 00143000 08:03 4459896                    /usr/lib/libm-2.31.so
+7f54e386f000-7f54e3870000 rw-p 00144000 08:03 4459896                    /usr/lib/libm-2.31.so
+7f54e3870000-7f54e3a62000 r--p 00000000 08:03 4985851                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f54e3a62000-7f54e430e000 r-xp 001f2000 08:03 4985851                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f54e430e000-7f54e44b0000 r--p 00a9e000 08:03 4985851                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f54e44b0000-7f54e44b1000 ---p 00c40000 08:03 4985851                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f54e44b1000-7f54e4546000 r--p 00c40000 08:03 4985851                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f54e4546000-7f54e456e000 rw-p 00cd5000 08:03 4985851                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f54e456e000-7f54e45a1000 rw-p 00000000 00:00 0 
+7f54e45a1000-7f54e45a8000 r--p 00000000 08:03 4459940                    /usr/lib/libpthread-2.31.so
+7f54e45a8000-7f54e45b8000 r-xp 00007000 08:03 4459940                    /usr/lib/libpthread-2.31.so
+7f54e45b8000-7f54e45bd000 r--p 00017000 08:03 4459940                    /usr/lib/libpthread-2.31.so
+7f54e45bd000-7f54e45be000 r--p 0001b000 08:03 4459940                    /usr/lib/libpthread-2.31.so
+7f54e45be000-7f54e45bf000 rw-p 0001c000 08:03 4459940                    /usr/lib/libpthread-2.31.so
+7f54e45bf000-7f54e45c3000 rw-p 00000000 00:00 0 
+7f54e45c3000-7f54e45c4000 r--p 00000000 08:03 4459888                    /usr/lib/libdl-2.31.so
+7f54e45c4000-7f54e45c5000 r-xp 00001000 08:03 4459888                    /usr/lib/libdl-2.31.so
+7f54e45c5000-7f54e45c6000 r--p 00002000 08:03 4459888                    /usr/lib/libdl-2.31.so
+7f54e45c6000-7f54e45c7000 r--p 00002000 08:03 4459888                    /usr/lib/libdl-2.31.so
+7f54e45c7000-7f54e45c8000 rw-p 00003000 08:03 4459888                    /usr/lib/libdl-2.31.so
+7f54e45c8000-7f54e45cb000 r--p 00000000 08:03 4469607                    /usr/lib/libz.so.1.2.11
+7f54e45cb000-7f54e45d9000 r-xp 00003000 08:03 4469607                    /usr/lib/libz.so.1.2.11
+7f54e45d9000-7f54e45df000 r--p 00011000 08:03 4469607                    /usr/lib/libz.so.1.2.11
+7f54e45df000-7f54e45e0000 ---p 00017000 08:03 4469607                    /usr/lib/libz.so.1.2.11
+7f54e45e0000-7f54e45e1000 r--p 00017000 08:03 4469607                    /usr/lib/libz.so.1.2.11
+7f54e45e1000-7f54e45e2000 rw-p 00018000 08:03 4469607                    /usr/lib/libz.so.1.2.11
+7f54e45e2000-7f54e4607000 r--p 00000000 08:03 4459874                    /usr/lib/libc-2.31.so
+7f54e4607000-7f54e4753000 r-xp 00025000 08:03 4459874                    /usr/lib/libc-2.31.so
+7f54e4753000-7f54e479e000 r--p 00171000 08:03 4459874                    /usr/lib/libc-2.31.so
+7f54e479e000-7f54e47a1000 r--p 001bb000 08:03 4459874                    /usr/lib/libc-2.31.so
+7f54e47a1000-7f54e47a4000 rw-p 001be000 08:03 4459874                    /usr/lib/libc-2.31.so
+7f54e47a4000-7f54e47a8000 rw-p 00000000 00:00 0 
+7f54e47a8000-7f54e47ab000 r--p 00000000 08:03 4985847                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f54e47ab000-7f54e47af000 r-xp 00003000 08:03 4985847                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f54e47af000-7f54e47b1000 r--p 00007000 08:03 4985847                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f54e47b1000-7f54e47b2000 r--p 00008000 08:03 4985847                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f54e47b2000-7f54e47b3000 rw-p 00009000 08:03 4985847                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f54e47b3000-7f54e47bb000 rw-s 00000000 00:2d 1443439                    /tmp/hsperfdata_marc/86296
+7f54e47bb000-7f54e47bc000 rw-p 00000000 00:00 0 
+7f54e47bc000-7f54e47c9000 r--p 00000000 08:03 4985829                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f54e47c9000-7f54e47df000 r-xp 0000d000 08:03 4985829                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f54e47df000-7f54e47e6000 r--p 00023000 08:03 4985829                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f54e47e6000-7f54e47e7000 r--p 00029000 08:03 4985829                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f54e47e7000-7f54e47e8000 rw-p 0002a000 08:03 4985829                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f54e47e8000-7f54e47e9000 rw-p 00000000 00:00 0 
+7f54e47e9000-7f54e47ee000 r--p 00000000 08:03 4985846                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f54e47ee000-7f54e47f5000 r-xp 00005000 08:03 4985846                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f54e47f5000-7f54e47f7000 r--p 0000c000 08:03 4985846                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f54e47f7000-7f54e47f8000 ---p 0000e000 08:03 4985846                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f54e47f8000-7f54e47fa000 r--p 0000e000 08:03 4985846                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f54e47fa000-7f54e47fb000 rw-p 00010000 08:03 4985846                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f54e47fb000-7f54e47fe000 r--p 00000000 08:03 4985815                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f54e47fe000-7f54e4807000 r-xp 00003000 08:03 4985815                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f54e4807000-7f54e480a000 r--p 0000c000 08:03 4985815                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f54e480a000-7f54e480b000 r--p 0000e000 08:03 4985815                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f54e480b000-7f54e480c000 rw-p 0000f000 08:03 4985815                    /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f54e480c000-7f54e480e000 rw-p 00000000 00:00 0 
+7f54e480e000-7f54e4810000 r--p 00000000 08:03 4459861                    /usr/lib/ld-2.31.so
+7f54e4810000-7f54e4830000 r-xp 00002000 08:03 4459861                    /usr/lib/ld-2.31.so
+7f54e4830000-7f54e4838000 r--p 00022000 08:03 4459861                    /usr/lib/ld-2.31.so
+7f54e4838000-7f54e4839000 r--p 00000000 00:00 0 
+7f54e4839000-7f54e483a000 r--p 0002a000 08:03 4459861                    /usr/lib/ld-2.31.so
+7f54e483a000-7f54e483b000 rw-p 0002b000 08:03 4459861                    /usr/lib/ld-2.31.so
+7f54e483b000-7f54e483c000 rw-p 00000000 00:00 0 
+7ffd35ca1000-7ffd35cc2000 rw-p 00000000 00:00 0                          [stack]
+7ffd35dcc000-7ffd35dd0000 r--p 00000000 00:00 0                          [vvar]
+7ffd35dd0000-7ffd35dd2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: App 46737
+java_class_path (initial): /home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-definition-0.19.1.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/slf4j-api-1.7.6.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/guava-21.0.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-gfm-tables-0.19.1.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/org.eclipse.lsp4j-0.2.0.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/org.eclipse.xtend.lib.macro-2.12.0.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-0.19.1.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-toc-0.19.1.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-xwiki-macros-0.19.1.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/flexmark-ext-typographic-0.19.1.jar:/home/marc/.vscode-oss/extensions/adamvoss.vscode-languagetool-3.8.0/lib/languagetool-languageserver/build/install/languagetool-languageserver/lib/openhtmltopdf-core-0.0.1-RC9.jar:/home/marc/.vscode-oss/exten
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+SHELL=/usr/bin/zsh
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa6a400], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa6a400], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8c7be0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8c7be0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8c7be0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8c7be0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8c7ab0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8c7e80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8c7e80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8c7e80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8c7e80], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="0;36"
+HOME_URL="https://www.archlinux.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+LOGO=archlinux
+
+uname:Linux 5.6.4-arch1-1 #1 SMP PREEMPT Mon, 13 Apr 2020 12:21:19 +0000 x86_64
+libc:glibc 2.31 NPTL 2.31 
+rlimit: STACK 8192k, CORE infinity, NPROC 31465, NOFILE 524288, AS infinity
+load average:0.56 0.59 0.74
+
+/proc/meminfo:
+MemTotal:        8074824 kB
+MemFree:         2217156 kB
+MemAvailable:    3993064 kB
+Buffers:          160484 kB
+Cached:          2387904 kB
+SwapCached:        53832 kB
+Active:          3623432 kB
+Inactive:        1631340 kB
+Active(anon):    2853832 kB
+Inactive(anon):   476444 kB
+Active(file):     769600 kB
+Inactive(file):  1154896 kB
+Unevictable:      224744 kB
+Mlocked:              48 kB
+SwapTotal:      12582908 kB
+SwapFree:       11601148 kB
+Dirty:              1292 kB
+Writeback:             0 kB
+AnonPages:       2911836 kB
+Mapped:          1025636 kB
+Shmem:            678244 kB
+KReclaimable:     149320 kB
+Slab:             253460 kB
+SReclaimable:     149320 kB
+SUnreclaim:       104140 kB
+KernelStack:       12704 kB
+PageTables:        43812 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    16620320 kB
+Committed_AS:   12260624 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       33004 kB
+VmallocChunk:          0 kB
+Percpu:             3936 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      294656 kB
+DirectMap2M:     8015872 kB
+DirectMap1G:     1048576 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-3
+cpu_memory_nodes: 0
+active_processor_count: 4
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -1
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 3746705408
+memory_max_usage_in_bytes: 7146815488
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz
+stepping	: 1
+microcode	: 0x25
+cpu MHz		: 1696.015
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 4790.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz
+stepping	: 1
+microcode	: 0x25
+cpu MHz		: 1696.012
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 4790.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz
+stepping	: 1
+microcode	: 0x25
+cpu MHz		: 1696.014
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 4790.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 69
+model name	: Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz
+stepping	: 1
+microcode	: 0x25
+cpu MHz		: 1696.042
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 4790.27
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8074824k(2216904k free), swap 12582908k(11601148k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.242-b08) for linux-amd64 JRE (1.8.0_242-b08), built on Jan 26 2020 11:52:10 by "builduser" with gcc 9.2.0
+
+time: Fri Apr 17 21:47:01 2020
+timezone: CEST
+elapsed time: 1588 seconds (0d 0h 26m 28s)
+
