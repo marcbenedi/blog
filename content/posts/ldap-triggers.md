@@ -44,7 +44,7 @@ Please, check the [repository][2] for up to date information and detailed instru
 
 ## Flow
 
-{{< figure src="ldap-triggers-flow-background.png" alt="Visualization of LDAP Triggers execution flow" position="center" style="border-radius: 8px;" captionPosition="center" caption="Visualization of LDAP Triggers execution flow">}}
+{{< figure src="/img/ldap-triggers-flow-background.png" alt="Visualization of LDAP Triggers execution flow" position="center" style="border-radius: 8px;" captionPosition="center" caption="Visualization of LDAP Triggers execution flow">}}
 
 ## Triggers
 
