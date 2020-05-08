@@ -3,23 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://marcbenedi.github.io/blog/posts/ldap-triggers/</loc>
+    <lastmod>2020-05-09T00:32:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/tags/linux/</loc>
+    <lastmod>2020-05-09T00:32:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/posts/</loc>
+    <lastmod>2020-05-09T00:32:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/tags/project/</loc>
+    <lastmod>2020-05-09T00:32:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/tags/</loc>
+    <lastmod>2020-05-09T00:32:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://marcbenedi.github.io/blog/</loc>
+    <lastmod>2020-05-09T00:32:37+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://marcbenedi.github.io/blog/posts/linux/</loc>
   </url>
   
   <url>
     <loc>https://marcbenedi.github.io/blog/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://marcbenedi.github.io/blog/posts/</loc>
-  </url>
-  
-  <url>
-    <loc>https://marcbenedi.github.io/blog/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>https://marcbenedi.github.io/blog/</loc>
   </url>
   
 </urlset>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Ldap Triggers :: λ — marcb&#39;s blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="For up to date information check the project&amp;rsquo;s repository: LDAP Triggers (https://github.com/marcbenedi/ldap-triggers)
+ Abstract LDAP Triggers (https://github.com/marcbenedi/ldap-triggers) is an Open Source python package under MIT license which triggers an action every time an LDAP action is done. The current supported actions are creation/deletion of users/groups.
+It comes with very clear documentation and it&amp;rsquo;s very easy to set up.
+What is LDAP? LDAP (Lightweight Directory Access Protocol) is a protocol for accessing and managing a ditributed directory information over a network." />
+<meta name="keywords" content="LDAP, Trigger" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://marcbenedi.github.io/blog/posts/ldap-triggers/" />
+
+
+
+
+<link rel="stylesheet" href="https://marcbenedi.github.io/blog/assets/style.css">
+
+  <link rel="stylesheet" href="https://marcbenedi.github.io/blog/assets/organge.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://marcbenedi.github.io/blog/img/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="https://marcbenedi.github.io/blog/img/favicon/organge.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  <meta name="twitter:site" content="blog.marcb.pro" />
+
+<meta name="twitter:creator" content="marcbenedi" />
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ldap Triggers :: λ">
+<meta property="og:description" content="LDAP Triggers is a python package which allows executing an arbitrary script when an LDAP entity modification is detected." />
+<meta property="og:url" content="https://marcbenedi.github.io/blog/posts/ldap-triggers/" />
+<meta property="og:site_name" content="Ldap Triggers" />
+
+  <meta property="og:image" content="https://marcbenedi.github.io/blog/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-05-09 00:32:37 &#43;0200 CEST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="https://marcbenedi.github.io/blog/">
+  <div class="logo">
+    $ cd ~
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="http://marcb.pro/">About me</a></li>
+        
+      
+        
+          <li><a href="/blog/posts/linux/">Linux</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="http://marcb.pro/">About me</a></li>
+      
+    
+      
+        <li><a href="/blog/posts/linux/">Linux</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://marcbenedi.github.io/blog/posts/ldap-triggers/">Ldap Triggers</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2020-05-09
+    </span>
+    
+    
+    <span class="post-author">::
+      Marc Benedi
+    </span>
+    
+    <span class="post-author">::
+      <a target="_blank" href="https://twitter.com/marcbenedi">@marcbenedi </a>
+    </span>
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://marcbenedi.github.io/blog/tags/project/">Project</a>&nbsp;
+    
+    #<a href="https://marcbenedi.github.io/blog/tags/linux/">Linux</a>&nbsp;
+    
+  </span>
+  
+
+  <span class="post-tags">
+    Reading time: 3m
+  </span>
+
+  
+
+  <div class="post-content"><div>
+        <blockquote>
+<p><strong>For up to date information check the project&rsquo;s repository: <a href="https://github.com/marcbenedi/ldap-triggers">LDAP Triggers</a> (<a href="https://github.com/marcbenedi/ldap-triggers">https://github.com/marcbenedi/ldap-triggers</a>)</strong></p>
+</blockquote>
+<h1 id="abstract">Abstract<a href="#abstract" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p><a href="https://github.com/marcbenedi/ldap-triggers">LDAP Triggers</a> (<a href="https://github.com/marcbenedi/ldap-triggers">https://github.com/marcbenedi/ldap-triggers</a>) is an Open Source python package under MIT license which triggers an action every time an LDAP action is done. The current supported actions are <strong>creation/deletion</strong> of <strong>users/groups</strong>.</p>
+<p>It comes with very clear documentation and it&rsquo;s very easy to set up.</p>
+<h1 id="what-is-ldap">What is LDAP?<a href="#what-is-ldap" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p><a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle">LDAP (Lightweight Directory Access Protocol)</a> is a protocol for accessing and managing a ditributed directory information over a network. The most common use case could be managing users and groups of a company over multiple machines. It would be impractical creating all users in all machines because each time an addition/modification/deletion of a user or machine would be required, it would be to be done multiple times. That is were LDAP joing the game.</p>
+<h1 id="why-would-i-need-a-trigger">Why would I need a trigger?<a href="#why-would-i-need-a-trigger" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Executing an arbitrary script every time an entity modification is detected can be very useful: The range of applications goes from sending an email when their account is created to deleting their home directories when their account is deleted.</p>
+<p>By default LDAP does not come with this feature. It could be that some private vendors offer it in their custom implementation but this comes with the drawback of using propietary software. <a href="https://github.com/marcbenedi/ldap-triggers">LDAP Triggers</a> is Open Source (MIT License) so you are free to use it and extend.</p>
+<h1 id="ldap-triggers">LDAP Triggers<a href="#ldap-triggers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="motivation-and-approach">Motivation and approach<a href="#motivation-and-approach" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Since I could not find any solution for this problem, I decided to start this Open Source project so more people can benefit from it.</p>
+<p>The package is very lightweight and does not have boilerplate features. It has a single purpose: Execute scripts placed in a specific path.</p>
+<h2 id="installation-and-usage">Installation and usage<a href="#installation-and-usage" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Please, check the <a href="https://github.com/marcbenedi/ldap-triggers">repository</a> for up to date information and detailed instructions. I decided not to write this here because it would become obsolete.</p>
+<h2 id="flow">Flow<a href="#flow" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+
+  <figure class="center" >
+    <img src="/img/ldap-triggers-flow-background.png"  alt="Visualization of LDAP Triggers execution flow"   style="border-radius: 8px;"  />
+    
+      <figcaption class="center" >Visualization of LDAP Triggers execution flow</figcaption>
+    
+  </figure>
+
+
+<h2 id="triggers">Triggers<a href="#triggers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The name and the path where the scripts are stored is very important because it&rsquo;s where the package will search for them. The path is <code>/etc/ldaptriggers/triggers/</code> and the file name should follow the next pattern:</p>
+<p><strong>[action]_[entity]_[description]</strong>.bash</p>
+<p><em>The extension is not relevant.</em></p>
+<p>For example, this would be a valid trigger name: <code>add_people_send_email.bash</code>. Of course, it is necessary that the script is executable by root. This is because the deamon is run by root.</p>
+<h2 id="configuration-options">Configuration options<a href="#configuration-options" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The configuration file is stored in <code>/etc/ldaptriggers/config.yaml</code>. It is recommended to execute <code>$ ldaptriggers --init</code> after installing the package because it will ask you the configuration parameters:</p>
+<ul>
+<li>ldap_uri: The LDAP server uri</li>
+<li>ldap_secret: The path with the LDAP admin password</li>
+<li>org: Directory</li>
+<li>admin: Admin user</li>
+<li>people: Users</li>
+<li>groups: Groups</li>
+<li>timeout: Wait time between fetches</li>
+</ul>
+<h2 id="examples">Examples<a href="#examples" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>In the <a href="https://github.com/marcbenedi/ldap-triggers">repository</a>, in the <code>examples</code> folder you can find examples of <strong>triggers</strong>, and <strong>configuration file</strong> among others.</p>
+<!-- raw HTML omitted -->
+
+      </div></div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://marcbenedi.github.io/blog/assets/main.js"></script>
+<script src="https://marcbenedi.github.io/blog/assets/prism.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+</div>
+
+</body>
+</html>

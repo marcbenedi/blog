@@ -6,9 +6,22 @@
     <description>Recent content on λ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 09 May 2020 00:32:37 +0200</lastBuildDate>
     
 	<atom:link href="https://marcbenedi.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ldap Triggers</title>
+      <link>https://marcbenedi.github.io/blog/posts/ldap-triggers/</link>
+      <pubDate>Sat, 09 May 2020 00:32:37 +0200</pubDate>
+      
+      <guid>https://marcbenedi.github.io/blog/posts/ldap-triggers/</guid>
+      <description>For up to date information check the project&amp;rsquo;s repository: LDAP Triggers (https://github.com/marcbenedi/ldap-triggers)
+ Abstract LDAP Triggers (https://github.com/marcbenedi/ldap-triggers) is an Open Source python package under MIT license which triggers an action every time an LDAP action is done. The current supported actions are creation/deletion of users/groups.
+It comes with very clear documentation and it&amp;rsquo;s very easy to set up.
+What is LDAP? LDAP (Lightweight Directory Access Protocol) is a protocol for accessing and managing a ditributed directory information over a network.</description>
+    </item>
     
   </channel>
 </rss>
