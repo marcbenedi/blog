@@ -44,9 +44,15 @@ systemd-boot is a simple uefi boot manager
 systemd-boot configuration
 ### /boot/loader/random-seed
 
+It is one of the sources for initializing the entropy pool during boot. For more information check [this](https://systemd.io/RANDOM_SEEDS/). It explains very clearly how Linux manages random numbers.
+
 ### /boot/loader/entries/arch.conf
 
+A boot entry.
+
 ## /boot/vmlinuz-linux
+
+The compressed and bootable kernel. It should not be confused with vmlinux, which is the non-compressed and non-bootable kernel form. It is usually an intermediate step to producing vmlinuz. 
 
 # /dev/ 
 where physical devices are mounted
@@ -297,3 +303,7 @@ Points to /run/
 [8] https://unix.stackexchange.com/a/18157
 
 [9] https://wiki.archlinux.org/index.php/systemd-boot
+
+[10] https://systemd.io/RANDOM_SEEDS/
+
+[11] http://www.linfo.org/vmlinuz.html
