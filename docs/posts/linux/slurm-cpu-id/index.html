@@ -5,7 +5,7 @@
     <title>How to know which CPUs have been allocated to a job? :: λ — marcb&#39;s blog</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TL;DR We can get the abstract CPU IDs that Slurm allocated for a job through scontrol[4]:
 $ scontrol show job -d $SLURM_JOBID ... Nodes=node CPU_IDs=0-4,8-9 Mem=128000 GRES_IDX= ... This will list all the information regarding the job, including the CPU IDs. The problem is that these IDs do not match the actual physical cores (which is what commands such as htop show us)[3]. To match these abstract IDs to the physical ones, we need to check the output of the command lstopo:" />
 <meta name="keywords" content="Slurm" />
@@ -35,7 +35,7 @@ if (!doNotTrack) {
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.marcb.pro/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="http://blog.marcb.pro/img/apple-touch-icon-192x192.png">
 
   <link rel="shortcut icon" href="http://blog.marcb.pro/img/favicon/orange.png">
 
@@ -43,17 +43,19 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary" />
 
-  <meta name="twitter:site" content="blog.marcb.pro" />
+  
+    <meta name="twitter:site" content="blog.marcb.pro" />
+  
+    <meta name="twitter:creator" content="marcbenedi" />
 
-<meta name="twitter:creator" content="marcbenedi" />
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="How to know which CPUs have been allocated to a job? :: λ">
+<meta property="og:title" content="How to know which CPUs have been allocated to a job?">
 <meta property="og:description" content="Check how to get the physical CPU IDs allocated to a Slurm job" />
 <meta property="og:url" content="http://blog.marcb.pro/posts/linux/slurm-cpu-id/" />
-<meta property="og:site_name" content="How to know which CPUs have been allocated to a job?" />
+<meta property="og:site_name" content="λ" />
 
   <meta property="og:image" content="http://blog.marcb.pro/">
 
@@ -89,7 +91,9 @@ if (!doNotTrack) {
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -221,6 +225,8 @@ In the Slurm documentation[<a href="https://slurm.schedmd.com/gres.conf.html">2<
 
 <script src="http://blog.marcb.pro/assets/main.js"></script>
 <script src="http://blog.marcb.pro/assets/prism.js"></script>
+
+
 
 
 
