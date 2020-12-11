@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on λ</title>
-    <link>/categories/</link>
+    <link>https://blog.marcb.pro/categories/</link>
     <description>Recent content in Categories on λ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright © blog.marcb.pro 2020</copyright><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © blog.marcb.pro 2020</copyright><atom:link href="https://blog.marcb.pro/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
