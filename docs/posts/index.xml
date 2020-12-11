@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on λ</title>
-    <link>marcbenedi.github.io/blog/posts/</link>
+    <link>blog.marcb.pro/posts/</link>
     <description>Recent content in Posts on λ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © blog.marcb.pro 2020</copyright>
-    <lastBuildDate>Fri, 11 Dec 2020 10:23:25 +0100</lastBuildDate><atom:link href="marcbenedi.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Dec 2020 10:23:25 +0100</lastBuildDate><atom:link href="blog.marcb.pro/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ldap Triggers</title>
-      <link>marcbenedi.github.io/blog/posts/ldap-triggers/</link>
+      <link>blog.marcb.pro/posts/ldap-triggers/</link>
       <pubDate>Sat, 09 May 2020 00:32:37 +0200</pubDate>
       
-      <guid>marcbenedi.github.io/blog/posts/ldap-triggers/</guid>
+      <guid>blog.marcb.pro/posts/ldap-triggers/</guid>
       <description>For up to date information check the project&amp;rsquo;s repository: LDAP Triggers (https://github.com/marcbenedi/ldap-triggers)
  Abstract LDAP Triggers (https://github.com/marcbenedi/ldap-triggers) is an Open Source python package under MIT license which triggers an action every time an LDAP action is done. The current supported actions are creation/deletion of users/groups.
 It comes with very clear documentation and it&amp;rsquo;s very easy to set up.

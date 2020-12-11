@@ -1,4 +1,4 @@
-baseURL = "marcbenedi.github.io/blog/"
+baseURL = "blog.marcb.pro/"
 languageCode = "en-us"
 publishDir = "docs"
 theme = "terminal"
