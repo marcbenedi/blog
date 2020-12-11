@@ -3,52 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://blog.marcb.pro/posts/linux/</loc>
+    <loc>/posts/linux/</loc>
     <lastmod>2020-12-11T10:23:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/posts/linux/slurm-cpu-id/</loc>
+    <loc>/posts/linux/slurm-cpu-id/</loc>
     <lastmod>2020-12-11T10:23:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/tags/linux/</loc>
+    <loc>/tags/linux/</loc>
     <lastmod>2020-12-11T10:23:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2020-12-11T10:23:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/tags/slurm/</loc>
+    <loc>/tags/slurm/</loc>
     <lastmod>2020-12-11T10:23:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2020-12-11T10:23:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/</loc>
+    <loc>/</loc>
     <lastmod>2020-12-11T10:23:25+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/posts/ldap-triggers/</loc>
+    <loc>/posts/ldap-triggers/</loc>
     <lastmod>2020-05-09T00:32:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/tags/project/</loc>
+    <loc>/tags/project/</loc>
     <lastmod>2020-05-09T00:32:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.marcb.pro/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
 </urlset>
