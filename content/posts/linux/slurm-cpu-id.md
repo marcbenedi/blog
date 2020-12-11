@@ -1,13 +1,13 @@
 +++
 title = "How to know which CPUs have been allocated to a job?"
 date = 2020-12-11T10:23:25+01:00
-draft = true
+draft = false
 author = "Marc Benedi"
 authorTwitter = "marcbenedi"
 cover = ""
 tags = ["Linux", "Slurm"]
 keywords = ["Slurm"]
-description = "TODO"
+description = "Check how to get the physical CPU IDs allocated to a Slurm job"
 showFullContent = false
 +++
 

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>How to know which CPUs have been allocated to a job? :: λ — marcb&#39;s blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="TL;DR We can get the abstract CPU IDs that Slurm allocated for a job through scontrol[4]:
+$ scontrol show job -d $SLURM_JOBID ... Nodes=node CPU_IDs=0-4,8-9 Mem=128000 GRES_IDX= ... This will list all the information regarding the job, including the CPU IDs. The problem is that these IDs do not match the actual physical cores (which is what commands such as htop show us)[3]. To match these abstract IDs to the physical ones, we need to check the output of the command lstopo:" />
+<meta name="keywords" content="Slurm" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://blog.marcb.pro/posts/linux/slurm-cpu-id/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165940964-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+<link rel="stylesheet" href="http://blog.marcb.pro/assets/style.css">
+
+  <link rel="stylesheet" href="http://blog.marcb.pro/assets/organge.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.marcb.pro/img/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="http://blog.marcb.pro/img/favicon/organge.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  <meta name="twitter:site" content="blog.marcb.pro" />
+
+<meta name="twitter:creator" content="marcbenedi" />
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to know which CPUs have been allocated to a job? :: λ">
+<meta property="og:description" content="Check how to get the physical CPU IDs allocated to a Slurm job" />
+<meta property="og:url" content="http://blog.marcb.pro/posts/linux/slurm-cpu-id/" />
+<meta property="og:site_name" content="How to know which CPUs have been allocated to a job?" />
+
+  <meta property="og:image" content="http://blog.marcb.pro/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-12-11 10:23:25 &#43;0100 CET" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="http://blog.marcb.pro/">
+  <div class="logo">
+    $ cd ~
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="http://marcb.pro/">About me</a></li>
+        
+      
+        
+          <li><a href="/posts/linux/">Linux</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="http://marcb.pro/">About me</a></li>
+      
+    
+      
+        <li><a href="/posts/linux/">Linux</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="http://blog.marcb.pro/posts/linux/slurm-cpu-id/">How to know which CPUs have been allocated to a job?</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2020-12-11
+    </span>
+    
+    
+    <span class="post-author">::
+      Marc Benedi
+    </span>
+    
+    <span class="post-author">::
+      <a target="_blank" href="https://twitter.com/marcbenedi">@marcbenedi </a>
+    </span>
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="http://blog.marcb.pro/tags/linux/">Linux</a>&nbsp;
+    
+    #<a href="http://blog.marcb.pro/tags/slurm/">Slurm</a>&nbsp;
+    
+  </span>
+  
+
+  <span class="post-tags">
+    Reading time: 4m
+  </span>
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="tldr">TL;DR<a href="#tldr" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>We can get the abstract CPU IDs that Slurm allocated for a job through <code>scontrol</code>[<a href="https://stackoverflow.com/a/55655127/7484221">4</a>]:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ scontrol show job -d $SLURM_JOBID
+...
+  Nodes<span style="color:#f92672">=</span>node CPU_IDs<span style="color:#f92672">=</span>0-4,8-9 Mem<span style="color:#f92672">=</span><span style="color:#ae81ff">128000</span> GRES_IDX<span style="color:#f92672">=</span>
+...
+</code></pre></div><p>This will list all the information regarding the job, including the CPU IDs. The problem is that these IDs do not match the actual physical cores (which is what commands such as <code>htop</code> show us)[<a href="https://slurm.schedmd.com/cpu_management.html">3</a>]. To match these abstract IDs to the physical ones, we need to check the output of the command <code>lstopo</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">$ lstopo --only pu
+PU L#0 (P#0)
+PU L#1 (P#6)
+...
+</code></pre></div><p>As you can see in the output, for each <em>physical unit (PU)</em> we get two values: the <em>logic ID (L)</em> and the <em>physical ID (P)</em>.
+In the Slurm documentation[<a href="https://slurm.schedmd.com/gres.conf.html">2</a>], it can be found that they use the <em>logic ID</em> as <em>abstract ID</em>.</p>
+<h1 id="full-story-">Full story 🥸<a href="#full-story-" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>I&rsquo;m currently setting up a HPC using Slurm[<a href="https://slurm.schedmd.com/">1</a>] for the <em>Visual Computing &amp; Artificial Intelligence group</em>[<a href="https://www.niessnerlab.org/">5</a>] as a student assistant. One of the features that we want is being able to detect inactive jobs to free the allocated resources. For that, I currently check the GPU and CPU usage. The nodes of the cluster have a <em>Telegraf</em> service which sends metrics to an <em>InfluxDB</em>. Getting the GPU metrics was easy: we created a <em>prolog</em> script which stored the environment variables (which includes the GPUs ID if any requested) and our API would read the content of that file and query InfluxDB.</p>
+<p>Regarding CPU usage, the first approach was setting up the <em>ProfileInfluxDB</em> plugin[<a href="https://slurm.schedmd.com/acct_gather.conf.html">6</a>] which would collect jobs' metrics and send them to our InfluDB. However, for our use case, this plugin was not suitable since the metrics were not sent to the database often enough (in our set up they were sent every 20 mins approx.). This is explained in [<a href="https://slurm.schedmd.com/acct_gather.conf.html">6</a>] in the following note:</p>
+<p><em>NOTE: Collected information is written from every compute node where a job runs to the influxd instance listening on the ProfileInfluxDBHost. <strong>In order to avoid overloading the influxd instance with incoming connection requests, the plugin uses an internal buffer which is filled with samples</strong>. Once the buffer is full, a HTTP API write request is performed and the buffer is emptied to hold subsequent samples. A final request is also performed when a task ends even if the buffer isn&rsquo;t full.</em></p>
+<p>My second approach was getting the CPU IDs assigned to each job and then querying the <em>InfluxDB</em> with the metrics sent by the <em>Telegraf</em> service. This approach was very similar to the one I was using for the GPUs, the only difference was the source of the IDs. After a little bit of <em>Googling</em>, I found this answer in stackoverflow[<a href="https://stackoverflow.com/a/55655127/7484221">4</a>] which explained how to get the IDs from <code>scontrol</code> (See <strong>TL;DR</strong>). I decided to implement this solution as it looked very promising. After implementing it, I realized that some jobs were classified as active when they should not. After looking at the metrics reported by <em>InfluxDB</em>, I decided to check through htop what was running on those CPUs. What I saw really worried me: Some jobs were running on CPUs that were not assigned to them 😨! As you may have guessed (especially if you went over the <strong>TL;DR</strong> section), that was not the actual problem. I won&rsquo;t bother you explaining all the things I checked but my main lead was that something was wrong with the multi-threading configuration (which was a problem that we actually had 😅).</p>
+<p>Going crazy around Slurm&rsquo;s documentation I found the following clue[<a href="https://slurm.schedmd.com/cpu_management.html">3</a>]:</p>
+<p><em>A NOTE ON CPU NUMBERING: The number and layout of logical CPUs known to Slurm is described in the node definitions in slurm.conf. <strong>This may differ from the physical CPU layout on the actual hardware</strong>. For this reason, Slurm generates its own internal, or &ldquo;abstract&rdquo;, CPU numbers. These numbers may not match the physical, or &ldquo;machine&rdquo;, CPU numbers known to Linux.</em></p>
+<p>So that was it: Slurm was not using the actual <em>physical IDs</em> but some internal numbering. The next step was obvious: How do we go from abstract IDs to physical IDs? Again, I went through Slurm&rsquo;s documentation until I found another clue[<a href="https://slurm.schedmd.com/gres.conf.html">2</a>]:</p>
+<p><em>NOTE: Since Slurm must be able to perform resource management on heterogeneous clusters having various processing unit numbering schemes, a logical core index must be specified instead of the physical core index. That logical core index might not correspond to your physical core index number. Core 0 will be the first core on the first socket, while core 1 will be the second core on the first socket. <strong>This numbering coincides with the logical core number (Core L#) seen in &ldquo;lstopo -l&rdquo; command output.</strong></em></p>
+<p>Finally! I had found the key to solving the puzzle <code>lstopo</code> 🏆.</p>
+<p>To not repeat myself, all the pieces are put together in the <strong>TL;DR</strong> section.</p>
+<h1 id="references-">References 📑<a href="#references-" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>[<a href="https://slurm.schedmd.com/">1</a>]: <a href="https://slurm.schedmd.com/">https://slurm.schedmd.com/</a></p>
+<p>[<a href="https://slurm.schedmd.com/gres.conf.html">2</a>]: <a href="https://slurm.schedmd.com/gres.conf.html">https://slurm.schedmd.com/gres.conf.html</a></p>
+<p>[<a href="https://slurm.schedmd.com/cpu_management.html">3</a>]: <a href="https://slurm.schedmd.com/cpu_management.html">https://slurm.schedmd.com/cpu_management.html</a></p>
+<p>[<a href="https://stackoverflow.com/a/55655127/7484221">4</a>]: <a href="https://stackoverflow.com/a/55655127/7484221">https://stackoverflow.com/a/55655127/7484221</a></p>
+<p>[<a href="https://www.niessnerlab.org/">5</a>]: <a href="https://www.niessnerlab.org/">https://www.niessnerlab.org/</a></p>
+<p>[<a href="https://slurm.schedmd.com/acct_gather.conf.html">6</a>]: <a href="https://slurm.schedmd.com/acct_gather.conf.html">https://slurm.schedmd.com/acct_gather.conf.html</a></p>
+
+      </div></div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="http://blog.marcb.pro/assets/main.js"></script>
+<script src="http://blog.marcb.pro/assets/prism.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+  
+</div>
+
+</body>
+</html>
