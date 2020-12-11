@@ -8,4 +8,4 @@ readOtherPosts = "Read other posts"
 
 [params.logo]
   logoText = "$ cd ~"
-  logoHomeLink = "https://marcbenedi.github.io/blog/"
+  logoHomeLink = "http://blog.marcb.pro/"

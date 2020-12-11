@@ -2,30 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on λ</title>
-    <link>https://marcbenedi.github.io/blog/tags/</link>
+    <link>http://blog.marcb.pro/tags/</link>
     <description>Recent content in Tags on λ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2020 00:32:37 +0200</lastBuildDate>
-    
-	<atom:link href="https://marcbenedi.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 09 May 2020 00:32:37 +0200</lastBuildDate><atom:link href="http://blog.marcb.pro/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
-      <link>https://marcbenedi.github.io/blog/tags/linux/</link>
+      <link>http://blog.marcb.pro/tags/linux/</link>
       <pubDate>Sat, 09 May 2020 00:32:37 +0200</pubDate>
       
-      <guid>https://marcbenedi.github.io/blog/tags/linux/</guid>
+      <guid>http://blog.marcb.pro/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Project</title>
-      <link>https://marcbenedi.github.io/blog/tags/project/</link>
+      <link>http://blog.marcb.pro/tags/project/</link>
       <pubDate>Sat, 09 May 2020 00:32:37 +0200</pubDate>
       
-      <guid>https://marcbenedi.github.io/blog/tags/project/</guid>
+      <guid>http://blog.marcb.pro/tags/project/</guid>
       <description></description>
     </item>
     
