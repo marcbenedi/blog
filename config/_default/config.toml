@@ -1,4 +1,4 @@
-baseURL = "blog.marcb.pro/"
+baseURL = "/"
 languageCode = "en-us"
 publishDir = "docs"
 theme = "terminal"

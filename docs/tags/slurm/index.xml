@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slurm on λ</title>
-    <link>blog.marcb.pro/tags/slurm/</link>
+    <link>/tags/slurm/</link>
     <description>Recent content in Slurm on λ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © blog.marcb.pro 2020</copyright>
-    <lastBuildDate>Fri, 11 Dec 2020 10:23:25 +0100</lastBuildDate><atom:link href="blog.marcb.pro/tags/slurm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Dec 2020 10:23:25 +0100</lastBuildDate><atom:link href="/tags/slurm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to know which CPUs have been allocated to a job?</title>
-      <link>blog.marcb.pro/posts/linux/slurm-cpu-id/</link>
+      <link>/posts/linux/slurm-cpu-id/</link>
       <pubDate>Fri, 11 Dec 2020 10:23:25 +0100</pubDate>
       
-      <guid>blog.marcb.pro/posts/linux/slurm-cpu-id/</guid>
+      <guid>/posts/linux/slurm-cpu-id/</guid>
       <description>TL;DR We can get the abstract CPU IDs that Slurm allocated for a job through scontrol[4]:
 $ scontrol show job -d $SLURM_JOBID ... Nodes=node CPU_IDs=0-4,8-9 Mem=128000 GRES_IDX= ... This will list all the information regarding the job, including the CPU IDs. The problem is that these IDs do not match the actual physical cores (which is what commands such as htop show us)[3]. To match these abstract IDs to the physical ones, we need to check the output of the command lstopo:</description>
     </item>
