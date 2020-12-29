@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © blog.marcb.pro 2020</copyright>
-    <lastBuildDate>Fri, 11 Dec 2020 10:23:25 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Dec 2020 15:23:25 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The magic of SSH Remote Forwarding</title>
+      <link>/posts/linux/the_magic_of_ssh_remote_forwarding/</link>
+      <pubDate>Fri, 11 Dec 2020 15:23:25 +0100</pubDate>
+      
+      <guid>/posts/linux/the_magic_of_ssh_remote_forwarding/</guid>
+      <description>These past days I&amp;rsquo;ve been setting up a Raspberry Pi running some services in my room. I wanted to access them from outside the house&amp;rsquo;s network but unfortunately, I don&amp;rsquo;t have access to the router.
+I could have set up a VPN client into the Pi but it is running a very minimal OS to which I cannot install packages.
+Fortunately, SSH has an option for Remote port forwarding which allowed me to solve this problem.</description>
+    </item>
+    
     <item>
       <title>How to know which CPUs have been allocated to a job?</title>
       <link>/posts/linux/slurm-cpu-id/</link>
