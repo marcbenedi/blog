@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © blog.marcb.pro 2020</copyright>
-    <lastBuildDate>Fri, 11 Dec 2020 15:23:25 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 10:29:49 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Handling duplicated routes in Vue.js</title>
+      <link>/posts/vue_router_duplicated_route_error/</link>
+      <pubDate>Fri, 01 Jan 2021 10:29:49 +0100</pubDate>
+      
+      <guid>/posts/vue_router_duplicated_route_error/</guid>
+      <description>For one of my side projects, I&amp;rsquo;m using Vue.js[2] to develop a web client. Vue.js offers an official router for the framework called Vue Router[3].
+In order to navigate between Views, the framework offers the following function:
+router.push({ name: &amp;#39;home&amp;#39;}) But what happens if we are already in the view home? We get the following nasty error:
+NavigationDuplicated { _name: &amp;#34;NavigationDuplicated&amp;#34;, name: &amp;#34;NavigationDuplicated&amp;#34;, message: &amp;#34;Navigating to current location (&amp;#34;/home&amp;#34;) is not allowed&amp;#34;, stack: &amp;#34;Error at new NavigationDuplicated (webpack-int…/node_modules/vue/dist/vue.</description>
+    </item>
+    
     <item>
       <title>The magic of SSH Remote Forwarding</title>
       <link>/posts/linux/the_magic_of_ssh_remote_forwarding/</link>

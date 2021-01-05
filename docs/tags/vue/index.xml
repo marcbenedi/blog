@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on λ</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on λ</description>
+    <title>Vue on λ</title>
+    <link>/tags/vue/</link>
+    <description>Recent content in Vue on λ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright © blog.marcb.pro 2020</copyright>
-    <lastBuildDate>Fri, 01 Jan 2021 10:29:49 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 10:29:49 +0100</lastBuildDate><atom:link href="/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Handling duplicated routes in Vue.js</title>
       <link>/posts/vue_router_duplicated_route_error/</link>
@@ -18,18 +18,6 @@
 In order to navigate between Views, the framework offers the following function:
 router.push({ name: &amp;#39;home&amp;#39;}) But what happens if we are already in the view home? We get the following nasty error:
 NavigationDuplicated { _name: &amp;#34;NavigationDuplicated&amp;#34;, name: &amp;#34;NavigationDuplicated&amp;#34;, message: &amp;#34;Navigating to current location (&amp;#34;/home&amp;#34;) is not allowed&amp;#34;, stack: &amp;#34;Error at new NavigationDuplicated (webpack-int…/node_modules/vue/dist/vue.</description>
-    </item>
-    
-    <item>
-      <title>Ldap Triggers</title>
-      <link>/posts/ldap-triggers/</link>
-      <pubDate>Sat, 09 May 2020 00:32:37 +0200</pubDate>
-      
-      <guid>/posts/ldap-triggers/</guid>
-      <description>For up to date information check the project&amp;rsquo;s repository: LDAP Triggers (https://github.com/marcbenedi/ldap-triggers)
- Abstract LDAP Triggers (https://github.com/marcbenedi/ldap-triggers) is an Open Source python package under MIT license which triggers an action every time an LDAP action is done. The current supported actions are creation/deletion of users/groups.
-It comes with very clear documentation and it&amp;rsquo;s very easy to set up.
-What is LDAP? LDAP (Lightweight Directory Access Protocol) is a protocol for accessing and managing a ditributed directory information over a network.</description>
     </item>
     
   </channel>

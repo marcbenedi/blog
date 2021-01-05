@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.79.1" />
+	<meta name="generator" content="Hugo 0.80.0" />
   
     <title>λ — marcb&#39;s blog</title>
   
@@ -147,6 +147,52 @@ if (!doNotTrack) {
     
     
 
+    
+      <div class="post on-list">
+        <h1 class="post-title">
+          <a href="/posts/vue_router_duplicated_route_error/">Handling duplicated routes in Vue.js</a>
+        </h1>
+        <div class="post-meta">
+          <span class="post-date">
+            2021-01-01
+          </span>
+          
+            <span class="post-author">:: Marc Benedi</span>
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="/tags/vue/">Vue</a>&nbsp;
+            
+            #<a href="/tags/web/">Web</a>&nbsp;
+            
+          </span>
+        
+
+        
+          <img src="/img/vue-router-duplicated-route-error.png" class="post-cover" alt="Handling duplicated routes in Vue.js" />
+        
+
+        <div class="post-content">
+          
+          
+          For one of my side projects, I’m using Vue.js[2] to develop a web client. Vue.js offers an official router for the framework called Vue Router[3].
+In order to navigate between Views, the framework offers the following function:
+router.push({ name: 'home'}) But what happens if we are already in the view home? We get the following nasty error:
+NavigationDuplicated { _name: &quot;NavigationDuplicated&quot;, name: &quot;NavigationDuplicated&quot;, message: &quot;Navigating to current location (&quot;/home&quot;) is not allowed&quot;, stack: &quot;Error at new NavigationDuplicated (webpack-int…/node_modules/vue/dist/vue.
+          
+          
+        </div>
+
+        
+        <div>
+          <a class="read-more button"
+            href="/posts/vue_router_duplicated_route_error/">Read more →</a>
+        </div>
+        
+      </div>
     
       <div class="post on-list">
         <h1 class="post-title">

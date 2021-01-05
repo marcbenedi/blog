@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/vue_router_duplicated_route_error/</loc>
+    <lastmod>2021-01-01T10:29:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2021-01-01T10:29:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-01-01T10:29:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/vue/</loc>
+    <lastmod>2021-01-01T10:29:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/web/</loc>
+    <lastmod>2021-01-01T10:29:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-01-01T10:29:49+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/linux/</loc>
     <lastmod>2020-12-11T15:23:25+01:00</lastmod>
   </url>
@@ -13,22 +43,7 @@
   </url>
   
   <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-12-11T15:23:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-12-11T15:23:25+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/linux/the_magic_of_ssh_remote_forwarding/</loc>
-    <lastmod>2020-12-11T15:23:25+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-12-11T15:23:25+01:00</lastmod>
   </url>
   
